@@ -1,2 +1,11 @@
+# environment docs
 venv/
+energyEnviron/
+
+# dbt folders
+transform/target/
+transform/dbt_packages/
+transform/logs/
+
+# python files
 __pycache__/
