@@ -9,3 +9,6 @@ transform/logs/
 
 # python files
 __pycache__/
+
+# other files
+temp_result.json
