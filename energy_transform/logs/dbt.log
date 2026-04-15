@@ -1,0 +1,13 @@
+[0m07:17:29.347283 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000263FF985FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000263FE73C050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026381677110>]}
+
+
+============================== 07:17:29.350406 | fb958077-692e-4648-9554-aab61265b8c0 ==============================
+[0m07:17:29.350406 [info ] [MainThread]: Running with dbt=1.11.8
+[0m07:17:29.350889 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\harry\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt seed', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\harry\\Documents\\Projects\\2026\\EnergyPricing\\electricity_pricing\\logs'}
+[0m07:17:29.352806 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Could not find profile named 'electricity_pricing'
+[0m07:17:29.353390 [debug] [MainThread]: Command `dbt seed` failed at 07:17:29.353302 after 0.10 seconds
+[0m07:17:29.353611 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026381D6F100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026382DCE9F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026381D76030>]}
+[0m07:17:29.353838 [debug] [MainThread]: Flushing usage events
+[0m07:17:29.856400 [debug] [MainThread]: An error was encountered while trying to flush usage events
