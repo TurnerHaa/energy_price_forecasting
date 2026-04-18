@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "energy_data"."main"."system_prices" ("settlementDate" date,"settlementPeriod" integer,"startTime" timestamp without time zone,"createdDateTime" timestamp without time zone,"systemSellPrice" float8,"systemBuyPrice" float8,"bsadDefaulted" boolean,"priceDerivationCode" text,"reserveScarcityPrice" float8,"netImbalanceVolume" float8,"sellPriceAdjustment" integer,"buyPriceAdjustment" float8,"replacementPrice" float8,"replacementPriceReferenceVolume" float8,"totalAcceptedOfferVolume" float8,"totalAcceptedBidVolume" float8,"totalAdjustmentSellVolume" float8,"totalAdjustmentBuyVolume" float8,"totalSystemTaggedAcceptedOfferVolume" float8,"totalSystemTaggedAcceptedBidVolume" float8,"totalSystemTaggedAdjustmentSellVolume" float8,"totalSystemTaggedAdjustmentBuyVolume" float8)
+  ;
+    -- dbt seed --
+    
+          COPY "energy_data"."main"."system_prices" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\system_prices.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  
