@@ -65,7 +65,7 @@ try:
 
     target_dir.mkdir(parents=True, exist_ok=True)
 
-    file_path = target_dir / f'system_prices_{original_start_date}_to_{end_date}.csv'
+    file_path = target_dir / f'system_prices.csv'
 
     full_data_pd = pd.DataFrame(full_data)
 

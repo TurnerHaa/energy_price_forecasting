@@ -1,6 +1,7 @@
 # environment docs
 venv/
 energyEnviron/
+.env
 
 # dbt folders
 transform/target/
@@ -12,3 +13,4 @@ __pycache__/
 
 # other files
 temp_result.json
+energy_data.duckdb
