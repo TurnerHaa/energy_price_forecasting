@@ -34,7 +34,7 @@ try:
         full_data.extend(result_list)
         print(f"Successfully added {len(full_data)} entries.")
     else:
-        print(f"No results found in API response.")
+        print(f"No results found in API response. ")
 
 except Exception as e:
     print(f"Failed to process data: {e}")
