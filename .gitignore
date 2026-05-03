@@ -12,5 +12,6 @@ transform/logs/
 __pycache__/
 
 # other files
+archive/
 temp_result.json
 energy_data.duckdb
