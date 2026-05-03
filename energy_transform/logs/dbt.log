@@ -19127,3 +19127,56 @@ select
 [0m12:56:34.446757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DB4DE5440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DB4516990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DB4514910>]}
 [0m12:56:34.447025 [debug] [MainThread]: Flushing usage events
 [0m12:56:35.357907 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:32:56.340900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A63FA5FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A61D8C050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A64C67110>]}
+
+
+============================== 15:32:56.344141 | b25d4809-b192-4d90-bf7b-2e5943e0b358 ==============================
+[0m15:32:56.344141 [info ] [MainThread]: Running with dbt=1.11.8
+[0m15:32:56.344596 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\harry\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\harry\\Documents\\Projects\\2026\\EnergyPricing\\energy_transform\\logs'}
+[0m15:32:56.356560 [info ] [MainThread]: dbt version: 1.11.8
+[0m15:32:56.356933 [info ] [MainThread]: python version: 3.13.7
+[0m15:32:56.357180 [info ] [MainThread]: python path: C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Scripts\python.exe
+[0m15:32:56.357409 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m15:32:56.429381 [info ] [MainThread]: Using profiles dir at C:\Users\harry\.dbt
+[0m15:32:56.429781 [info ] [MainThread]: Using profiles.yml file at C:\Users\harry\.dbt\profiles.yml
+[0m15:32:56.430070 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\dbt_project.yml
+[0m15:32:56.431729 [info ] [MainThread]: adapter type: duckdb
+[0m15:32:56.432007 [info ] [MainThread]: adapter version: 1.10.1
+[0m15:32:56.504834 [info ] [MainThread]: Configuration:
+[0m15:32:56.505286 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:32:56.505571 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m15:32:56.505805 [info ] [MainThread]: Required dependencies:
+[0m15:32:56.506047 [debug] [MainThread]: Executing "git --help"
+[0m15:32:56.522912 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:32:56.523307 [debug] [MainThread]: STDERR: "b''"
+[0m15:32:56.523606 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:32:56.523877 [info ] [MainThread]: Connection:
+[0m15:32:56.524111 [info ] [MainThread]:   database: energy_data
+[0m15:32:56.524306 [info ] [MainThread]:   schema: main
+[0m15:32:56.524487 [info ] [MainThread]:   path: energy_data.duckdb
+[0m15:32:56.524678 [info ] [MainThread]:   config_options: None
+[0m15:32:56.524874 [info ] [MainThread]:   extensions: None
+[0m15:32:56.525075 [info ] [MainThread]:   settings: {}
+[0m15:32:56.525275 [info ] [MainThread]:   external_root: .
+[0m15:32:56.525601 [info ] [MainThread]:   use_credential_provider: None
+[0m15:32:56.525891 [info ] [MainThread]:   attach: None
+[0m15:32:56.526195 [info ] [MainThread]:   filesystems: None
+[0m15:32:56.526492 [info ] [MainThread]:   remote: None
+[0m15:32:56.526791 [info ] [MainThread]:   plugins: None
+[0m15:32:56.527069 [info ] [MainThread]:   disable_transactions: False
+[0m15:32:56.527480 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m15:32:56.778141 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m15:32:58.559256 [debug] [MainThread]: Using duckdb connection "debug"
+[0m15:32:58.559548 [debug] [MainThread]: On debug: select 1 as id
+[0m15:32:58.559732 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:32:58.584825 [debug] [MainThread]: SQL status: OK in 0.025 seconds
+[0m15:32:58.585516 [debug] [MainThread]: On debug: Close
+[0m15:32:58.586130 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m15:32:58.586436 [info ] [MainThread]: [32mAll checks passed![0m
+[0m15:32:58.587088 [debug] [MainThread]: Command `dbt debug` succeeded at 15:32:58.586998 after 2.33 seconds
+[0m15:32:58.587305 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:32:58.587519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A665E3CE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A6458C710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A663B7240>]}
+[0m15:32:58.587762 [debug] [MainThread]: Flushing usage events
+[0m15:32:59.120789 [debug] [MainThread]: An error was encountered while trying to flush usage events
