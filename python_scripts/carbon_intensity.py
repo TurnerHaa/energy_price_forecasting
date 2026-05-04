@@ -18,30 +18,36 @@ output_dir.mkdir(parents=True, exist_ok=True)
 # ===============================
 # API request
 # ===============================
-# start_date = dt(2017, 9, 26, tzinfo=timezone.utc)
 start_date = dt(2017, 9, 26, tzinfo=timezone.utc)
 current_date = start_date + timedelta(days=30)
 end_date = dt.now(timezone.utc)
 
 url = f'https://api.carbonintensity.org.uk/intensity/{start_date.strftime('%Y-%m-%dT%H:%MZ')}/{current_date.strftime('%Y-%m-%dT%H:%MZ')}'
 
-headers = {
-    'Accept': 'application/json'
-}
+headers = {'Accept': 'application/json'}
+
+print(f"starting_data collection from {start_date} to {end_date}...")
 
 all_data = [] 
-while current_date < end_date:
-    try: 
-        current_date = start_date + timedelta(days=30)
+while start_date < end_date:
+    
+    current_date = start_date + timedelta(days=30)
+    if current_date > end_date:
+        current_date = end_date
 
+    formatted_start = start_date.strftime('%Y-%m-%dT%H:%MZ')
+    formatted_end = current_date.strftime('%Y-%m-%dT%H:%MZ')
+    url = f'https://api.carbonintensity.org.uk/intensity/{formatted_start}/{formatted_end}'
+
+    try: 
         response = requests.get(url=url, params={}, headers = headers)
         response.raise_for_status()
 
         current_data = response.json()
 
-        if current_data:
+        if current_data and 'data' in current_data:
             all_data.extend(current_data['data'])
-            print(f"Fetched data from {start_date.strftime('%Y-%m-%dT%H:%MZ')} to {current_date.strftime('%Y-%m-%dT%H:%MZ')}. Total data: {len(all_data)} rows.")
+            print(f"Fetched data from {formatted_start} to {formatted_end}. Total: {len(all_data)}.")
         
         else:
             print(f"No data for {start_date}.")
@@ -52,13 +58,15 @@ while current_date < end_date:
 
     except Exception as e:
         print(f"Error accessing data: {e}")
+        break
 
 print(f"Data obtained successfully: {len(all_data)} rows.")
 
 if all_data:
-    df = pd.json_normalize(
-        all_data
-    )
+    output_file = output_dir / "emissions.json"
+    with open(output_file, 'w') as fp:
+        json.dump(all_data, fp, indent=4)
 
-with open(f'{output_dir}/emissions.json', 'w') as fp:
-    json.dump(all_data, fp, indent=4)    
+    df = pd.json_normalize(all_data)
+    df.to_csv(output_dir / "emissions.csv", index=False)
+    print(f"Saved JSON and CSV to {output_dir}")
