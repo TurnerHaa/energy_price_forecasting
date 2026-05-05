@@ -19,8 +19,9 @@ output_dir.mkdir(parents=True, exist_ok=True)
 # ===============================
 # API request
 # ===============================
-url = "https://data.elexon.co.uk/bmrs/api/v1/generation/outturn/summary"
-start_date = dt(2016, 4, 1, tzinfo=timezone.utc)
+url = "https://data.elexon.co.uk/bmrs/api/v1//balancing/pricing/market-index"
+
+start_date = dt(2026, 3, 1, tzinfo=timezone.utc)
 end_date = dt.now(timezone.utc)
 chunk_size = timedelta(days=7)
 
@@ -35,7 +36,7 @@ while current_start < end_date:
     params = {
     'from': current_start,
     'to': current_end,
-    'includeNegativeGeneration': 'true',
+    'dataProviders': 'APXMIDP',
     'format': 'json'
     }
 
@@ -46,7 +47,7 @@ while current_start < end_date:
         chunk_data = response.json()
 
         if chunk_data:
-                all_data.extend(chunk_data)
+                all_data.extend(chunk_data['data'])
                 print(f"Fetched: {current_start.date()} to {current_end.date()} ({len(chunk_data)} rows)")
         else:
             print(f"No data for: {current_start.date()}")
@@ -58,20 +59,17 @@ while current_start < end_date:
     time.sleep(0.5)
 
 if all_data:
-    output_file = output_dir / "generation.json"
+    print(all_data)
+    output_file = output_dir / "price.json"
     with open(output_file, 'w') as fp:
          json.dump(all_data, fp, indent=4)
 
-
-
     df = pd.json_normalize(
-        all_data, 
-        record_path=['data'], 
-        meta=['startTime', 'settlementPeriod']
+        all_data
     )
     
-    cols = ['startTime', 'settlementPeriod', 'fuelType', 'generation']
+    cols = ['startTime', 'settlementPeriod', 'dataProvider', 'price', 'volume']
     df = df[cols]
     
-    df.to_csv(output_dir / 'csv/generation_mix_2016_2026.csv', index=False)
+    df.to_csv(output_dir / 'price.csv', index=False)
     print(f"Success! Saved {len(df)} rows.")
