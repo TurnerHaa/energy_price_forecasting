@@ -22,7 +22,7 @@ all_data = []
 offset = 0
 
 print(f"Beginning data collection...")
-
+ 
 
 while True:
     try:
