@@ -12,8 +12,14 @@ from pathlib import Path
 # system paths
 # ===============================
 script_dir = Path(__file__).resolve().parents[1]
-output_dir = script_dir / "temp_data"
-output_dir.mkdir(parents=True, exist_ok=True)
+output_dir = script_dir / "data"
+
+json_dir = output_dir / "json"
+csv_dir = output_dir / "csv"
+
+json_dir.mkdir(parents=True, exist_ok=True)
+csv_dir.mkdir(parents=True, exist_ok=True)
+
 
 # ===============================
 # API request
@@ -63,10 +69,10 @@ while start_date < end_date:
 print(f"Data obtained successfully: {len(all_data)} rows.")
 
 if all_data:
-    output_file = output_dir / "emissions.json"
+    output_file = json_dir / "emissions.json"
     with open(output_file, 'w') as fp:
         json.dump(all_data, fp, indent=4)
 
     df = pd.json_normalize(all_data)
-    df.to_csv(output_dir / "emissions.csv", index=False)
-    print(f"Saved JSON and CSV to {output_dir}")
+    df.to_csv(csv_dir / "emissions.csv", index=False)
+    print(f"Saved JSON and CSV to {csv_dir}")

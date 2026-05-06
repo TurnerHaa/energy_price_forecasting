@@ -4,6 +4,9 @@ venv/
 energyEnviron/
 .env
 
+# data folders
+data/json/
+
 # dbt folders
 transform/target/
 transform/dbt_packages/
