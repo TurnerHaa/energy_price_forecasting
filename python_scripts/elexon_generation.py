@@ -13,7 +13,12 @@ from pathlib import Path
 # ===============================
 script_dir = Path(__file__).resolve().parents[1]
 output_dir = script_dir / "data"
-output_dir.mkdir(parents=True, exist_ok=True)
+
+json_dir = output_dir / "json"
+csv_dir = output_dir / "csv"
+
+json_dir.mkdir(parents=True, exist_ok=True)
+csv_dir.mkdir(parents=True, exist_ok=True)
 
 
 # ===============================
@@ -58,10 +63,9 @@ while current_start < end_date:
     time.sleep(0.5)
 
 if all_data:
-    output_file = output_dir / "generation.json"
+    output_file = json_dir / "generation.json"
     with open(output_file, 'w') as fp:
          json.dump(all_data, fp, indent=4)
-
 
 
     df = pd.json_normalize(
@@ -73,5 +77,5 @@ if all_data:
     cols = ['startTime', 'settlementPeriod', 'fuelType', 'generation']
     df = df[cols]
     
-    df.to_csv(output_dir / 'csv/generation_mix_2016_2026.csv', index=False)
+    df.to_csv(csv_dir / 'generation.csv', index=False)
     print(f"Success! Saved {len(df)} rows.")

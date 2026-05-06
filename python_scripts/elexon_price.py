@@ -13,7 +13,12 @@ from pathlib import Path
 # ===============================
 script_dir = Path(__file__).resolve().parents[1]
 output_dir = script_dir / "data"
-output_dir.mkdir(parents=True, exist_ok=True)
+
+json_dir = output_dir / "json"
+csv_dir = output_dir / "csv"
+
+json_dir.mkdir(parents=True, exist_ok=True)
+csv_dir.mkdir(parents=True, exist_ok=True)
 
 
 # ===============================
@@ -21,7 +26,7 @@ output_dir.mkdir(parents=True, exist_ok=True)
 # ===============================
 url = "https://data.elexon.co.uk/bmrs/api/v1//balancing/pricing/market-index"
 
-start_date = dt(2026, 3, 1, tzinfo=timezone.utc)
+start_date = dt(2016, 4, 1, tzinfo=timezone.utc)
 end_date = dt.now(timezone.utc)
 chunk_size = timedelta(days=7)
 
@@ -59,8 +64,7 @@ while current_start < end_date:
     time.sleep(0.5)
 
 if all_data:
-    print(all_data)
-    output_file = output_dir / "price.json"
+    output_file = json_dir / "price.json"
     with open(output_file, 'w') as fp:
          json.dump(all_data, fp, indent=4)
 
@@ -71,5 +75,5 @@ if all_data:
     cols = ['startTime', 'settlementPeriod', 'dataProvider', 'price', 'volume']
     df = df[cols]
     
-    df.to_csv(output_dir / 'price.csv', index=False)
+    df.to_csv(csv_dir / 'price.csv', index=False)
     print(f"Success! Saved {len(df)} rows.")
