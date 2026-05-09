@@ -1,5 +1,3 @@
-# NTS fixe OFFSET causing non-recent data
-
 # ===============================
 # import packages
 # ===============================
@@ -46,7 +44,6 @@ while i <= dt.today().year:
 
      i += 1
 
-
 # ===============================
 # API request
 # ===============================
@@ -56,7 +53,7 @@ offset = 0
 
 print(f"Beginning data collection...")
 
-for resource_id in resource_ids:
+for resource_id in [resource_ids[-1]]:
     offset = 0
 
     while True:
