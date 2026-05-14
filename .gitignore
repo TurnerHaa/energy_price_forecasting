@@ -8,9 +8,9 @@ energyEnviron/
 data/json/
 
 # dbt folders
-transform/target/
-transform/dbt_packages/
-transform/logs/
+energy_transform/target
+energy_transform/dbt_packages
+energy_transform/logs
 
 # python files
 __pycache__/

@@ -16,9 +16,11 @@ output_dir = script_dir / "data"
 
 json_dir = output_dir / "json"
 csv_dir = output_dir / "csv"
+seeds_dir = script_dir / "energy_transform/seeds"
 
 json_dir.mkdir(parents=True, exist_ok=True)
 csv_dir.mkdir(parents=True, exist_ok=True)
+seeds_dir.mkdir(parents=True, exist_ok=True)
 
 
 # ===============================
@@ -74,5 +76,10 @@ if all_data:
         json.dump(all_data, fp, indent=4)
 
     df = pd.json_normalize(all_data)
+
+    df['from'] = pd.to_datetime(df['from']).dt.strftime('%Y-%m-%dT%H:%M:%SZ')
+    df['to'] = pd.to_datetime(df['to']).dt.strftime('%Y-%m-%dT%H:%M:%SZ')
+
     df.to_csv(csv_dir / "emissions.csv", index=False)
+    df.to_csv(seeds_dir / "emissions.csv", index=False)
     print(f"Saved JSON and CSV to {csv_dir}")

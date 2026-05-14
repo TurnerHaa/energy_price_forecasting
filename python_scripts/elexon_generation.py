@@ -16,9 +16,11 @@ output_dir = script_dir / "data"
 
 json_dir = output_dir / "json"
 csv_dir = output_dir / "csv"
+seeds_dir = script_dir / "energy_transform/seeds"
 
 json_dir.mkdir(parents=True, exist_ok=True)
 csv_dir.mkdir(parents=True, exist_ok=True)
+seeds_dir.mkdir(parents=True, exist_ok=True)
 
 
 # ===============================
@@ -78,4 +80,6 @@ if all_data:
     df = df[cols]
     
     df.to_csv(csv_dir / 'generation.csv', index=False)
+    df.to_csv(seeds_dir / 'generation.csv', index=False)
+
     print(f"Success! Saved {len(df)} rows.")

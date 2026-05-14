@@ -17,9 +17,11 @@ output_dir = script_dir / "data"
 
 json_dir = output_dir / "json"
 csv_dir = output_dir / "csv"
+seeds_dir = script_dir / "energy_transform/seeds"
 
 json_dir.mkdir(parents=True, exist_ok=True)
 csv_dir.mkdir(parents=True, exist_ok=True)
+seeds_dir.mkdir(parents=True, exist_ok=True)
 
 # ===============================
 # obtain data links
@@ -53,7 +55,7 @@ offset = 0
 
 print(f"Beginning data collection...")
 
-for resource_id in [resource_ids[-1]]:
+for resource_id in resource_ids:
     offset = 0
 
     while True:
@@ -93,6 +95,7 @@ if all_data:
     )
 
     df.to_csv(csv_dir / 'demand.csv', index=False)
+    df.to_csv(seeds_dir / 'demand.csv', index=False)
     print(f"Success! Saved {len(df)} rows.")
 
     output_file = json_dir / 'demand.json'
