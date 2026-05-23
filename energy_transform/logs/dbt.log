@@ -19180,3 +19180,1192 @@ select
 [0m15:32:58.587519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A665E3CE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A6458C710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A663B7240>]}
 [0m15:32:58.587762 [debug] [MainThread]: Flushing usage events
 [0m15:32:59.120789 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:25:55.019656 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200FF8F5FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200FE6AC050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020081677110>]}
+
+
+============================== 07:25:55.023576 | 1b6b5331-4ce5-4030-9e10-aa253164c57c ==============================
+[0m07:25:55.023576 [info ] [MainThread]: Running with dbt=1.11.8
+[0m07:25:55.024168 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\harry\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt seed', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\harry\\Documents\\Projects\\2026\\EnergyPricing\\energy_transform\\logs'}
+[0m07:25:55.283336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1b6b5331-4ce5-4030-9e10-aa253164c57c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200810B5220>]}
+[0m07:25:55.327076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1b6b5331-4ce5-4030-9e10-aa253164c57c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020082D4FDF0>]}
+[0m07:25:55.340058 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m07:25:55.569178 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m07:25:56.343709 [debug] [MainThread]: Partial parsing enabled: 4 files deleted, 6 files added, 1 files changed.
+[0m07:25:56.344089 [debug] [MainThread]: Partial parsing: added file: energy_transform://seeds\demand_update.csv
+[0m07:25:56.344321 [debug] [MainThread]: Partial parsing: added file: energy_transform://seeds\generation.csv
+[0m07:25:56.344511 [debug] [MainThread]: Partial parsing: added file: energy_transform://seeds\price.csv
+[0m07:25:56.344695 [debug] [MainThread]: Partial parsing: added file: energy_transform://seeds\emissions.csv
+[0m07:25:56.344898 [debug] [MainThread]: Partial parsing: added file: energy_transform://models\schema.yml
+[0m07:25:56.345064 [debug] [MainThread]: Partial parsing: added file: energy_transform://seeds\demand.csv
+[0m07:25:56.345273 [debug] [MainThread]: Partial parsing: updated file: energy_transform://seeds\seeds.yml
+[0m07:25:56.345518 [debug] [MainThread]: Partial parsing: deleted file: energy_transform://seeds\system_prices.csv
+[0m07:25:56.345694 [debug] [MainThread]: Partial parsing: deleted file: energy_transform://models\example\my_second_dbt_model.sql
+[0m07:25:56.345849 [debug] [MainThread]: Partial parsing: deleted file: energy_transform://models\example\my_first_dbt_model.sql
+[0m07:25:56.521530 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_first_dbt_model' in the 'models' section of file 'models\schema.yml'
+[0m07:25:56.522524 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_second_dbt_model' in the 'models' section of file 'models\schema.yml'
+[0m07:25:56.582052 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'energy_prices' in the 'models' section of file 'seeds\seeds.yml'
+[0m07:25:56.584521 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.energy_transform.unique_my_first_dbt_model_id.16e066b321' (models\schema.yml) depends on a node named 'my_first_dbt_model' in package '' which was not found
+[0m07:25:56.584902 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.energy_transform.not_null_my_first_dbt_model_id.5fb22c2710' (models\schema.yml) depends on a node named 'my_first_dbt_model' in package '' which was not found
+[0m07:25:56.585209 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.energy_transform.unique_my_second_dbt_model_id.57a0f8c493' (models\schema.yml) depends on a node named 'my_second_dbt_model' in package '' which was not found
+[0m07:25:56.585477 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.energy_transform.not_null_my_second_dbt_model_id.151b76d778' (models\schema.yml) depends on a node named 'my_second_dbt_model' in package '' which was not found
+[0m07:25:56.585740 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.energy_transform.unique_energy_prices_id.842fa84ab0' (seeds\seeds.yml) depends on a node named 'energy_prices' in package '' which was not found
+[0m07:25:56.585988 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.energy_transform.not_null_energy_prices_id.1b3b7f5712' (seeds\seeds.yml) depends on a node named 'energy_prices' in package '' which was not found
+[0m07:25:56.618976 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.energy_transform
+[0m07:25:56.622040 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1b6b5331-4ce5-4030-9e10-aa253164c57c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020083422950>]}
+[0m07:25:56.666629 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\target\manifest.json
+[0m07:25:56.683428 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\target\semantic_manifest.json
+[0m07:25:56.696658 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1b6b5331-4ce5-4030-9e10-aa253164c57c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020083321310>]}
+[0m07:25:56.696973 [info ] [MainThread]: Found 5 seeds, 475 macros
+[0m07:25:56.697277 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1b6b5331-4ce5-4030-9e10-aa253164c57c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020083621710>]}
+[0m07:25:56.698784 [info ] [MainThread]: 
+[0m07:25:56.699064 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m07:25:56.699276 [info ] [MainThread]: 
+[0m07:25:56.699631 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m07:25:56.702594 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_energy_data'
+[0m07:25:58.376898 [debug] [ThreadPool]: Using duckdb connection "list_energy_data"
+[0m07:25:58.377191 [debug] [ThreadPool]: On list_energy_data: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "connection_name": "list_energy_data"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"energy_data"'
+    
+  
+  
+[0m07:25:58.377385 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:25:58.400918 [debug] [ThreadPool]: SQL status: OK in 0.023 seconds
+[0m07:25:58.402192 [debug] [ThreadPool]: On list_energy_data: Close
+[0m07:25:58.402649 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_energy_data, now create_energy_data_main)
+[0m07:25:58.402948 [debug] [ThreadPool]: Creating schema "database: "energy_data"
+schema: "main"
+"
+[0m07:25:58.406761 [debug] [ThreadPool]: Using duckdb connection "create_energy_data_main"
+[0m07:25:58.407014 [debug] [ThreadPool]: On create_energy_data_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "connection_name": "create_energy_data_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='energy_data'
+        and type='sqlite'
+    
+  
+[0m07:25:58.407246 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m07:25:58.407789 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m07:25:58.408513 [debug] [ThreadPool]: Using duckdb connection "create_energy_data_main"
+[0m07:25:58.408702 [debug] [ThreadPool]: On create_energy_data_main: BEGIN
+[0m07:25:58.409109 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:25:58.409282 [debug] [ThreadPool]: Using duckdb connection "create_energy_data_main"
+[0m07:25:58.409435 [debug] [ThreadPool]: On create_energy_data_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "connection_name": "create_energy_data_main"} */
+
+    
+    
+        create schema if not exists "energy_data"."main"
+    
+[0m07:25:58.410299 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m07:25:58.410783 [debug] [ThreadPool]: On create_energy_data_main: COMMIT
+[0m07:25:58.410973 [debug] [ThreadPool]: Using duckdb connection "create_energy_data_main"
+[0m07:25:58.411197 [debug] [ThreadPool]: On create_energy_data_main: COMMIT
+[0m07:25:58.411476 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:25:58.411660 [debug] [ThreadPool]: On create_energy_data_main: Close
+[0m07:25:58.412469 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_energy_data_main'
+[0m07:25:58.415791 [debug] [ThreadPool]: Using duckdb connection "list_energy_data_main"
+[0m07:25:58.415994 [debug] [ThreadPool]: On list_energy_data_main: BEGIN
+[0m07:25:58.416163 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:25:58.416485 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:25:58.416657 [debug] [ThreadPool]: Using duckdb connection "list_energy_data_main"
+[0m07:25:58.416814 [debug] [ThreadPool]: On list_energy_data_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "connection_name": "list_energy_data_main"} */
+select
+      'energy_data' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'energy_data'
+  
+[0m07:25:58.419916 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m07:25:58.420666 [debug] [ThreadPool]: On list_energy_data_main: ROLLBACK
+[0m07:25:58.436838 [debug] [ThreadPool]: Failed to rollback 'list_energy_data_main'
+[0m07:25:58.437100 [debug] [ThreadPool]: On list_energy_data_main: Close
+[0m07:25:58.438031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1b6b5331-4ce5-4030-9e10-aa253164c57c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200838D9E60>]}
+[0m07:25:58.438414 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:25:58.438596 [debug] [MainThread]: On master: BEGIN
+[0m07:25:58.438749 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m07:25:58.439180 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m07:25:58.439370 [debug] [MainThread]: On master: COMMIT
+[0m07:25:58.439533 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:25:58.439678 [debug] [MainThread]: On master: COMMIT
+[0m07:25:58.439946 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m07:25:58.440130 [debug] [MainThread]: On master: Close
+[0m07:25:58.443242 [debug] [Thread-1 (]: Began running node seed.energy_transform.demand
+[0m07:25:58.443577 [info ] [Thread-1 (]: 1 of 5 START seed file main.demand ............................................. [RUN]
+[0m07:25:58.443963 [debug] [Thread-1 (]: Acquiring new duckdb connection 'seed.energy_transform.demand'
+[0m07:25:58.444185 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.demand
+[0m07:25:58.444383 [debug] [Thread-1 (]: Began executing node seed.energy_transform.demand
+[0m07:26:10.485914 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand"
+[0m07:26:10.486211 [debug] [Thread-1 (]: On seed.energy_transform.demand: BEGIN
+[0m07:26:10.486423 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m07:26:10.486980 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:26:10.487308 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand"
+[0m07:26:10.487529 [debug] [Thread-1 (]: On seed.energy_transform.demand: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.demand"} */
+truncate table "energy_data"."main"."demand"
+[0m07:26:10.496412 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m07:26:10.502776 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand"
+[0m07:26:10.503021 [debug] [Thread-1 (]: On seed.energy_transform.demand: 
+          COPY "energy_data"."main"."demand" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\demand.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:26:10.681810 [debug] [Thread-1 (]: SQL status: OK in 0.178 seconds
+[0m07:26:10.685371 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.demand"
+[0m07:26:10.693120 [debug] [Thread-1 (]: On seed.energy_transform.demand: COMMIT
+[0m07:26:10.693394 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand"
+[0m07:26:10.693595 [debug] [Thread-1 (]: On seed.energy_transform.demand: COMMIT
+[0m07:26:10.706934 [debug] [Thread-1 (]: SQL status: OK in 0.013 seconds
+[0m07:26:10.708138 [debug] [Thread-1 (]: On seed.energy_transform.demand: Close
+[0m07:26:10.709520 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1b6b5331-4ce5-4030-9e10-aa253164c57c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002008396D0D0>]}
+[0m07:26:10.709858 [info ] [Thread-1 (]: 1 of 5 OK loaded seed file main.demand ......................................... [[32mINSERT 180766[0m in 12.26s]
+[0m07:26:10.710306 [debug] [Thread-1 (]: Finished running node seed.energy_transform.demand
+[0m07:26:10.710556 [debug] [Thread-1 (]: Began running node seed.energy_transform.demand_update
+[0m07:26:10.710900 [info ] [Thread-1 (]: 2 of 5 START seed file main.demand_update ...................................... [RUN]
+[0m07:26:10.711264 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.energy_transform.demand, now seed.energy_transform.demand_update)
+[0m07:26:10.711504 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.demand_update
+[0m07:26:10.711729 [debug] [Thread-1 (]: Began executing node seed.energy_transform.demand_update
+[0m07:26:10.877714 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand_update"
+[0m07:26:10.878022 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: BEGIN
+[0m07:26:10.878313 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:26:10.878781 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:26:10.879001 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand_update"
+[0m07:26:10.879238 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.demand_update"} */
+truncate table "energy_data"."main"."demand_update"
+[0m07:26:10.879789 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:26:10.880539 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand_update"
+[0m07:26:10.880761 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: 
+          COPY "energy_data"."main"."demand_update" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\demand_update.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:26:10.900160 [debug] [Thread-1 (]: SQL status: OK in 0.019 seconds
+[0m07:26:10.900582 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.demand_update"
+[0m07:26:10.901881 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: COMMIT
+[0m07:26:10.902119 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand_update"
+[0m07:26:10.902319 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: COMMIT
+[0m07:26:10.905565 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m07:26:10.906039 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: Close
+[0m07:26:10.906442 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1b6b5331-4ce5-4030-9e10-aa253164c57c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200838E0E10>]}
+[0m07:26:10.906844 [info ] [Thread-1 (]: 2 of 5 OK loaded seed file main.demand_update .................................. [[32mINSERT 2448[0m in 0.20s]
+[0m07:26:10.907304 [debug] [Thread-1 (]: Finished running node seed.energy_transform.demand_update
+[0m07:26:10.907544 [debug] [Thread-1 (]: Began running node seed.energy_transform.emissions
+[0m07:26:10.907920 [info ] [Thread-1 (]: 3 of 5 START seed file main.emissions .......................................... [RUN]
+[0m07:26:10.908236 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.energy_transform.demand_update, now seed.energy_transform.emissions)
+[0m07:26:10.908463 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.emissions
+[0m07:26:10.908661 [debug] [Thread-1 (]: Began executing node seed.energy_transform.emissions
+[0m07:26:15.059414 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.emissions"
+[0m07:26:15.059718 [debug] [Thread-1 (]: On seed.energy_transform.emissions: BEGIN
+[0m07:26:15.059915 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:26:15.060329 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:26:15.060557 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.emissions"
+[0m07:26:15.060749 [debug] [Thread-1 (]: On seed.energy_transform.emissions: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.emissions"} */
+truncate table "energy_data"."main"."emissions"
+[0m07:26:15.062028 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:26:15.062775 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.emissions"
+[0m07:26:15.063058 [debug] [Thread-1 (]: On seed.energy_transform.emissions: 
+          COPY "energy_data"."main"."emissions" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\emissions.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:26:15.154149 [debug] [Thread-1 (]: SQL status: OK in 0.091 seconds
+[0m07:26:15.154679 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.emissions"
+[0m07:26:15.156089 [debug] [Thread-1 (]: On seed.energy_transform.emissions: COMMIT
+[0m07:26:15.156352 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.emissions"
+[0m07:26:15.156556 [debug] [Thread-1 (]: On seed.energy_transform.emissions: COMMIT
+[0m07:26:15.162524 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m07:26:15.163060 [debug] [Thread-1 (]: On seed.energy_transform.emissions: Close
+[0m07:26:15.163444 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1b6b5331-4ce5-4030-9e10-aa253164c57c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200834F05F0>]}
+[0m07:26:15.163887 [info ] [Thread-1 (]: 3 of 5 OK loaded seed file main.emissions ...................................... [[32mINSERT 151258[0m in 4.26s]
+[0m07:26:15.164421 [debug] [Thread-1 (]: Finished running node seed.energy_transform.emissions
+[0m07:26:15.164680 [debug] [Thread-1 (]: Began running node seed.energy_transform.generation
+[0m07:26:15.165004 [info ] [Thread-1 (]: 4 of 5 START seed file main.generation ......................................... [RUN]
+[0m07:26:15.165369 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.energy_transform.emissions, now seed.energy_transform.generation)
+[0m07:26:15.165597 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.generation
+[0m07:26:15.165799 [debug] [Thread-1 (]: Began executing node seed.energy_transform.generation
+[0m07:26:23.813056 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.generation"
+[0m07:26:23.813370 [debug] [Thread-1 (]: On seed.energy_transform.generation: BEGIN
+[0m07:26:23.813577 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:26:23.814056 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:26:23.814317 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.generation"
+[0m07:26:23.814523 [debug] [Thread-1 (]: On seed.energy_transform.generation: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.generation"} */
+truncate table "energy_data"."main"."generation"
+[0m07:26:23.818286 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m07:26:23.819129 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.generation"
+[0m07:26:23.819391 [debug] [Thread-1 (]: On seed.energy_transform.generation: 
+          COPY "energy_data"."main"."generation" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\generation.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:26:23.920761 [debug] [Thread-1 (]: SQL status: OK in 0.101 seconds
+[0m07:26:23.921294 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.generation"
+[0m07:26:23.922796 [debug] [Thread-1 (]: On seed.energy_transform.generation: COMMIT
+[0m07:26:23.923055 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.generation"
+[0m07:26:23.923264 [debug] [Thread-1 (]: On seed.energy_transform.generation: COMMIT
+[0m07:26:23.937193 [debug] [Thread-1 (]: SQL status: OK in 0.014 seconds
+[0m07:26:23.937742 [debug] [Thread-1 (]: On seed.energy_transform.generation: Close
+[0m07:26:23.938096 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1b6b5331-4ce5-4030-9e10-aa253164c57c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020086816350>]}
+[0m07:26:23.938408 [info ] [Thread-1 (]: 4 of 5 OK loaded seed file main.generation ..................................... [[32mINSERT 495460[0m in 8.77s]
+[0m07:26:23.938848 [debug] [Thread-1 (]: Finished running node seed.energy_transform.generation
+[0m07:26:23.939170 [debug] [Thread-1 (]: Began running node seed.energy_transform.price
+[0m07:26:23.939710 [info ] [Thread-1 (]: 5 of 5 START seed file main.price .............................................. [RUN]
+[0m07:26:23.940018 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.energy_transform.generation, now seed.energy_transform.price)
+[0m07:26:23.940240 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.price
+[0m07:26:23.940433 [debug] [Thread-1 (]: Began executing node seed.energy_transform.price
+[0m07:26:27.025593 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.price"
+[0m07:26:27.025920 [debug] [Thread-1 (]: On seed.energy_transform.price: BEGIN
+[0m07:26:27.026132 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:26:27.026597 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:26:27.026821 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.price"
+[0m07:26:27.027007 [debug] [Thread-1 (]: On seed.energy_transform.price: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.price"} */
+truncate table "energy_data"."main"."price"
+[0m07:26:27.028449 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:26:27.029238 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.price"
+[0m07:26:27.029464 [debug] [Thread-1 (]: On seed.energy_transform.price: 
+          COPY "energy_data"."main"."price" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\price.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:26:27.122033 [debug] [Thread-1 (]: SQL status: OK in 0.092 seconds
+[0m07:26:27.122571 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.price"
+[0m07:26:27.123963 [debug] [Thread-1 (]: On seed.energy_transform.price: COMMIT
+[0m07:26:27.124213 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.price"
+[0m07:26:27.124413 [debug] [Thread-1 (]: On seed.energy_transform.price: COMMIT
+[0m07:26:27.131082 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m07:26:27.131646 [debug] [Thread-1 (]: On seed.energy_transform.price: Close
+[0m07:26:27.131996 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1b6b5331-4ce5-4030-9e10-aa253164c57c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020083633D90>]}
+[0m07:26:27.132323 [info ] [Thread-1 (]: 5 of 5 OK loaded seed file main.price .......................................... [[32mINSERT 167220[0m in 3.19s]
+[0m07:26:27.132771 [debug] [Thread-1 (]: Finished running node seed.energy_transform.price
+[0m07:26:27.133495 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:26:27.133707 [debug] [MainThread]: On master: BEGIN
+[0m07:26:27.133883 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m07:26:27.134230 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m07:26:27.134413 [debug] [MainThread]: On master: COMMIT
+[0m07:26:27.134582 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:26:27.134756 [debug] [MainThread]: On master: COMMIT
+[0m07:26:27.135044 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m07:26:27.135273 [debug] [MainThread]: On master: Close
+[0m07:26:27.135504 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:26:27.135669 [debug] [MainThread]: Connection 'create_energy_data_main' was properly closed.
+[0m07:26:27.135885 [debug] [MainThread]: Connection 'list_energy_data_main' was properly closed.
+[0m07:26:27.136043 [debug] [MainThread]: Connection 'seed.energy_transform.price' was properly closed.
+[0m07:26:27.136229 [info ] [MainThread]: 
+[0m07:26:27.136483 [info ] [MainThread]: Finished running 5 seeds in 0 hours 0 minutes and 30.44 seconds (30.44s).
+[0m07:26:27.137207 [debug] [MainThread]: Command end result
+[0m07:26:27.155870 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\target\manifest.json
+[0m07:26:27.157599 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\target\semantic_manifest.json
+[0m07:26:27.162027 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\target\run_results.json
+[0m07:26:27.162273 [info ] [MainThread]: 
+[0m07:26:27.162593 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m07:26:27.162868 [info ] [MainThread]: 
+[0m07:26:27.163151 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m07:26:27.163725 [debug] [MainThread]: Command `dbt seed` succeeded at 07:26:27.163645 after 32.25 seconds
+[0m07:26:27.164137 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020083532930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020081673F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020083590B30>]}
+[0m07:26:27.164405 [debug] [MainThread]: Flushing usage events
+[0m07:26:27.846399 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:31:07.844757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7F9195FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7F6F7C050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7F9E57110>]}
+
+
+============================== 07:31:07.848500 | a378ac52-ab28-476c-987c-db56e7f9a542 ==============================
+[0m07:31:07.848500 [info ] [MainThread]: Running with dbt=1.11.8
+[0m07:31:07.848950 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\harry\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt seed', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\harry\\Documents\\Projects\\2026\\EnergyPricing\\energy_transform\\logs'}
+[0m07:31:08.001741 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a378ac52-ab28-476c-987c-db56e7f9a542', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7F9895220>]}
+[0m07:31:08.045237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a378ac52-ab28-476c-987c-db56e7f9a542', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7FB52FDF0>]}
+[0m07:31:08.047011 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m07:31:08.173988 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m07:31:08.230242 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m07:31:08.230662 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a378ac52-ab28-476c-987c-db56e7f9a542', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7FB64E150>]}
+[0m07:31:08.854875 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'energy_prices' in the 'models' section of file 'seeds\seeds.yml'
+[0m07:31:08.911800 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_first_dbt_model' in the 'models' section of file 'models\schema.yml'
+[0m07:31:08.912590 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_second_dbt_model' in the 'models' section of file 'models\schema.yml'
+[0m07:31:08.917312 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.energy_transform.unique_energy_prices_id.842fa84ab0' (seeds\seeds.yml) depends on a node named 'energy_prices' in package '' which was not found
+[0m07:31:08.917633 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.energy_transform.not_null_energy_prices_id.1b3b7f5712' (seeds\seeds.yml) depends on a node named 'energy_prices' in package '' which was not found
+[0m07:31:08.918181 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.energy_transform.unique_my_first_dbt_model_id.16e066b321' (models\schema.yml) depends on a node named 'my_first_dbt_model' in package '' which was not found
+[0m07:31:08.918520 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.energy_transform.not_null_my_first_dbt_model_id.5fb22c2710' (models\schema.yml) depends on a node named 'my_first_dbt_model' in package '' which was not found
+[0m07:31:08.918805 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.energy_transform.unique_my_second_dbt_model_id.57a0f8c493' (models\schema.yml) depends on a node named 'my_second_dbt_model' in package '' which was not found
+[0m07:31:08.919119 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.energy_transform.not_null_my_second_dbt_model_id.151b76d778' (models\schema.yml) depends on a node named 'my_second_dbt_model' in package '' which was not found
+[0m07:31:08.969049 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.energy_transform
+[0m07:31:08.972138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a378ac52-ab28-476c-987c-db56e7f9a542', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7FBAA7200>]}
+[0m07:31:09.022918 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\target\manifest.json
+[0m07:31:09.024608 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\target\semantic_manifest.json
+[0m07:31:09.032532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a378ac52-ab28-476c-987c-db56e7f9a542', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7FBEF0D70>]}
+[0m07:31:09.032834 [info ] [MainThread]: Found 5 seeds, 475 macros
+[0m07:31:09.033132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a378ac52-ab28-476c-987c-db56e7f9a542', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7FBACB790>]}
+[0m07:31:09.034471 [info ] [MainThread]: 
+[0m07:31:09.034817 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m07:31:09.035119 [info ] [MainThread]: 
+[0m07:31:09.035509 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m07:31:09.038612 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_energy_data'
+[0m07:31:09.079466 [debug] [ThreadPool]: Using duckdb connection "list_energy_data"
+[0m07:31:09.079766 [debug] [ThreadPool]: On list_energy_data: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "connection_name": "list_energy_data"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"energy_data"'
+    
+  
+  
+[0m07:31:09.079971 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:31:09.103979 [debug] [ThreadPool]: SQL status: OK in 0.024 seconds
+[0m07:31:09.104897 [debug] [ThreadPool]: On list_energy_data: Close
+[0m07:31:09.105395 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_energy_data, now create_energy_data_main)
+[0m07:31:09.105705 [debug] [ThreadPool]: Creating schema "database: "energy_data"
+schema: "main"
+"
+[0m07:31:09.109484 [debug] [ThreadPool]: Using duckdb connection "create_energy_data_main"
+[0m07:31:09.109707 [debug] [ThreadPool]: On create_energy_data_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "connection_name": "create_energy_data_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='energy_data'
+        and type='sqlite'
+    
+  
+[0m07:31:09.109941 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m07:31:09.110544 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m07:31:09.111405 [debug] [ThreadPool]: Using duckdb connection "create_energy_data_main"
+[0m07:31:09.111613 [debug] [ThreadPool]: On create_energy_data_main: BEGIN
+[0m07:31:09.111968 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:31:09.112166 [debug] [ThreadPool]: Using duckdb connection "create_energy_data_main"
+[0m07:31:09.112335 [debug] [ThreadPool]: On create_energy_data_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "connection_name": "create_energy_data_main"} */
+
+    
+    
+        create schema if not exists "energy_data"."main"
+    
+[0m07:31:09.112647 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:31:09.113124 [debug] [ThreadPool]: On create_energy_data_main: COMMIT
+[0m07:31:09.113329 [debug] [ThreadPool]: Using duckdb connection "create_energy_data_main"
+[0m07:31:09.113507 [debug] [ThreadPool]: On create_energy_data_main: COMMIT
+[0m07:31:09.113775 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:31:09.113976 [debug] [ThreadPool]: On create_energy_data_main: Close
+[0m07:31:09.114870 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_energy_data_main'
+[0m07:31:09.118009 [debug] [ThreadPool]: Using duckdb connection "list_energy_data_main"
+[0m07:31:09.118567 [debug] [ThreadPool]: On list_energy_data_main: BEGIN
+[0m07:31:09.118752 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:31:09.119122 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:31:09.119328 [debug] [ThreadPool]: Using duckdb connection "list_energy_data_main"
+[0m07:31:09.119510 [debug] [ThreadPool]: On list_energy_data_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "connection_name": "list_energy_data_main"} */
+select
+      'energy_data' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'energy_data'
+  
+[0m07:31:09.121839 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m07:31:09.122648 [debug] [ThreadPool]: On list_energy_data_main: ROLLBACK
+[0m07:31:09.123407 [debug] [ThreadPool]: Failed to rollback 'list_energy_data_main'
+[0m07:31:09.123656 [debug] [ThreadPool]: On list_energy_data_main: Close
+[0m07:31:09.124535 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a378ac52-ab28-476c-987c-db56e7f9a542', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7FBDDB4D0>]}
+[0m07:31:09.124812 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:31:09.124993 [debug] [MainThread]: On master: BEGIN
+[0m07:31:09.125152 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m07:31:09.125455 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m07:31:09.125654 [debug] [MainThread]: On master: COMMIT
+[0m07:31:09.125830 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:31:09.125997 [debug] [MainThread]: On master: COMMIT
+[0m07:31:09.126246 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m07:31:09.126415 [debug] [MainThread]: On master: Close
+[0m07:31:09.128529 [debug] [Thread-1 (]: Began running node seed.energy_transform.demand
+[0m07:31:09.128852 [info ] [Thread-1 (]: 1 of 5 START seed file main.demand ............................................. [RUN]
+[0m07:31:09.129236 [debug] [Thread-1 (]: Acquiring new duckdb connection 'seed.energy_transform.demand'
+[0m07:31:09.129465 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.demand
+[0m07:31:09.129668 [debug] [Thread-1 (]: Began executing node seed.energy_transform.demand
+[0m07:31:21.247450 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand"
+[0m07:31:21.247748 [debug] [Thread-1 (]: On seed.energy_transform.demand: BEGIN
+[0m07:31:21.247949 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m07:31:21.248522 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:31:21.248765 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand"
+[0m07:31:21.248971 [debug] [Thread-1 (]: On seed.energy_transform.demand: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.demand"} */
+truncate table "energy_data"."main"."demand"
+[0m07:31:21.250297 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:31:21.256835 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand"
+[0m07:31:21.257090 [debug] [Thread-1 (]: On seed.energy_transform.demand: 
+          COPY "energy_data"."main"."demand" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\demand.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:31:21.423037 [debug] [Thread-1 (]: SQL status: OK in 0.166 seconds
+[0m07:31:21.426810 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.demand"
+[0m07:31:21.434318 [debug] [Thread-1 (]: On seed.energy_transform.demand: COMMIT
+[0m07:31:21.434602 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand"
+[0m07:31:21.434927 [debug] [Thread-1 (]: On seed.energy_transform.demand: COMMIT
+[0m07:31:21.452171 [debug] [Thread-1 (]: SQL status: OK in 0.017 seconds
+[0m07:31:21.453405 [debug] [Thread-1 (]: On seed.energy_transform.demand: Close
+[0m07:31:21.454707 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a378ac52-ab28-476c-987c-db56e7f9a542', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7FBCE76A0>]}
+[0m07:31:21.455122 [info ] [Thread-1 (]: 1 of 5 OK loaded seed file main.demand ......................................... [[32mINSERT 180766[0m in 12.32s]
+[0m07:31:21.455604 [debug] [Thread-1 (]: Finished running node seed.energy_transform.demand
+[0m07:31:21.455867 [debug] [Thread-1 (]: Began running node seed.energy_transform.demand_update
+[0m07:31:21.456208 [info ] [Thread-1 (]: 2 of 5 START seed file main.demand_update ...................................... [RUN]
+[0m07:31:21.456576 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.energy_transform.demand, now seed.energy_transform.demand_update)
+[0m07:31:21.456817 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.demand_update
+[0m07:31:21.457031 [debug] [Thread-1 (]: Began executing node seed.energy_transform.demand_update
+[0m07:31:21.630755 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand_update"
+[0m07:31:21.631086 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: BEGIN
+[0m07:31:21.631441 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:31:21.631971 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:31:21.632198 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand_update"
+[0m07:31:21.632396 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.demand_update"} */
+truncate table "energy_data"."main"."demand_update"
+[0m07:31:21.632932 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:31:21.633729 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand_update"
+[0m07:31:21.633964 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: 
+          COPY "energy_data"."main"."demand_update" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\demand_update.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:31:21.653967 [debug] [Thread-1 (]: SQL status: OK in 0.020 seconds
+[0m07:31:21.654502 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.demand_update"
+[0m07:31:21.655847 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: COMMIT
+[0m07:31:21.656135 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand_update"
+[0m07:31:21.656377 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: COMMIT
+[0m07:31:21.659480 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m07:31:21.659978 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: Close
+[0m07:31:21.660317 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a378ac52-ab28-476c-987c-db56e7f9a542', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7FBB316D0>]}
+[0m07:31:21.660633 [info ] [Thread-1 (]: 2 of 5 OK loaded seed file main.demand_update .................................. [[32mINSERT 2448[0m in 0.20s]
+[0m07:31:21.661116 [debug] [Thread-1 (]: Finished running node seed.energy_transform.demand_update
+[0m07:31:21.661385 [debug] [Thread-1 (]: Began running node seed.energy_transform.emissions
+[0m07:31:21.661720 [info ] [Thread-1 (]: 3 of 5 START seed file main.emissions .......................................... [RUN]
+[0m07:31:21.662086 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.energy_transform.demand_update, now seed.energy_transform.emissions)
+[0m07:31:21.662314 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.emissions
+[0m07:31:21.662524 [debug] [Thread-1 (]: Began executing node seed.energy_transform.emissions
+[0m07:31:25.934686 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.emissions"
+[0m07:31:25.935041 [debug] [Thread-1 (]: On seed.energy_transform.emissions: BEGIN
+[0m07:31:25.935310 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:31:25.935737 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:31:25.935943 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.emissions"
+[0m07:31:25.936127 [debug] [Thread-1 (]: On seed.energy_transform.emissions: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.emissions"} */
+truncate table "energy_data"."main"."emissions"
+[0m07:31:25.937283 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:31:25.938076 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.emissions"
+[0m07:31:25.938353 [debug] [Thread-1 (]: On seed.energy_transform.emissions: 
+          COPY "energy_data"."main"."emissions" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\emissions.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:31:26.031356 [debug] [Thread-1 (]: SQL status: OK in 0.093 seconds
+[0m07:31:26.031925 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.emissions"
+[0m07:31:26.033270 [debug] [Thread-1 (]: On seed.energy_transform.emissions: COMMIT
+[0m07:31:26.033510 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.emissions"
+[0m07:31:26.033766 [debug] [Thread-1 (]: On seed.energy_transform.emissions: COMMIT
+[0m07:31:26.039326 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m07:31:26.039851 [debug] [Thread-1 (]: On seed.energy_transform.emissions: Close
+[0m07:31:26.040189 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a378ac52-ab28-476c-987c-db56e7f9a542', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7FE5C20D0>]}
+[0m07:31:26.040504 [info ] [Thread-1 (]: 3 of 5 OK loaded seed file main.emissions ...................................... [[32mINSERT 151258[0m in 4.38s]
+[0m07:31:26.040945 [debug] [Thread-1 (]: Finished running node seed.energy_transform.emissions
+[0m07:31:26.041186 [debug] [Thread-1 (]: Began running node seed.energy_transform.generation
+[0m07:31:26.041519 [info ] [Thread-1 (]: 4 of 5 START seed file main.generation ......................................... [RUN]
+[0m07:31:26.041830 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.energy_transform.emissions, now seed.energy_transform.generation)
+[0m07:31:26.042032 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.generation
+[0m07:31:26.042224 [debug] [Thread-1 (]: Began executing node seed.energy_transform.generation
+[0m07:31:34.862286 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.generation"
+[0m07:31:34.862625 [debug] [Thread-1 (]: On seed.energy_transform.generation: BEGIN
+[0m07:31:34.862836 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:31:34.863395 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:31:34.863639 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.generation"
+[0m07:31:34.863847 [debug] [Thread-1 (]: On seed.energy_transform.generation: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.generation"} */
+truncate table "energy_data"."main"."generation"
+[0m07:31:34.867291 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m07:31:34.868229 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.generation"
+[0m07:31:34.868476 [debug] [Thread-1 (]: On seed.energy_transform.generation: 
+          COPY "energy_data"."main"."generation" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\generation.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:31:34.968917 [debug] [Thread-1 (]: SQL status: OK in 0.100 seconds
+[0m07:31:34.969492 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.generation"
+[0m07:31:34.971113 [debug] [Thread-1 (]: On seed.energy_transform.generation: COMMIT
+[0m07:31:34.971450 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.generation"
+[0m07:31:34.971697 [debug] [Thread-1 (]: On seed.energy_transform.generation: COMMIT
+[0m07:31:34.988507 [debug] [Thread-1 (]: SQL status: OK in 0.017 seconds
+[0m07:31:34.989157 [debug] [Thread-1 (]: On seed.energy_transform.generation: Close
+[0m07:31:34.989560 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a378ac52-ab28-476c-987c-db56e7f9a542', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7FBDE6510>]}
+[0m07:31:34.989884 [info ] [Thread-1 (]: 4 of 5 OK loaded seed file main.generation ..................................... [[32mINSERT 495460[0m in 8.95s]
+[0m07:31:34.990341 [debug] [Thread-1 (]: Finished running node seed.energy_transform.generation
+[0m07:31:34.990594 [debug] [Thread-1 (]: Began running node seed.energy_transform.price
+[0m07:31:34.990925 [info ] [Thread-1 (]: 5 of 5 START seed file main.price .............................................. [RUN]
+[0m07:31:34.991264 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.energy_transform.generation, now seed.energy_transform.price)
+[0m07:31:34.991492 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.price
+[0m07:31:34.991699 [debug] [Thread-1 (]: Began executing node seed.energy_transform.price
+[0m07:31:38.736374 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.price"
+[0m07:31:38.736684 [debug] [Thread-1 (]: On seed.energy_transform.price: BEGIN
+[0m07:31:38.736977 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:31:38.737592 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:31:38.737827 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.price"
+[0m07:31:38.738025 [debug] [Thread-1 (]: On seed.energy_transform.price: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.price"} */
+truncate table "energy_data"."main"."price"
+[0m07:31:38.739489 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:31:38.740280 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.price"
+[0m07:31:38.740512 [debug] [Thread-1 (]: On seed.energy_transform.price: 
+          COPY "energy_data"."main"."price" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\price.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:31:38.827194 [debug] [Thread-1 (]: SQL status: OK in 0.086 seconds
+[0m07:31:38.827719 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.price"
+[0m07:31:38.829104 [debug] [Thread-1 (]: On seed.energy_transform.price: COMMIT
+[0m07:31:38.829417 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.price"
+[0m07:31:38.829631 [debug] [Thread-1 (]: On seed.energy_transform.price: COMMIT
+[0m07:31:38.840914 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m07:31:38.841443 [debug] [Thread-1 (]: On seed.energy_transform.price: Close
+[0m07:31:38.841781 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a378ac52-ab28-476c-987c-db56e7f9a542', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7FB82AF30>]}
+[0m07:31:38.842103 [info ] [Thread-1 (]: 5 of 5 OK loaded seed file main.price .......................................... [[32mINSERT 167220[0m in 3.85s]
+[0m07:31:38.842540 [debug] [Thread-1 (]: Finished running node seed.energy_transform.price
+[0m07:31:38.846625 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\target\run_results.json
+[0m07:31:38.847234 [error] [MainThread]: CANCEL query create_energy_data_main ........................................... [[31mCANCEL[0m]
+[0m07:31:38.847501 [error] [MainThread]: CANCEL query list_energy_data_main ............................................. [[31mCANCEL[0m]
+[0m07:31:38.847776 [error] [MainThread]: CANCEL query seed.energy_transform.price ....................................... [[31mCANCEL[0m]
+[0m07:31:38.848120 [info ] [MainThread]: 
+[0m07:31:38.848405 [info ] [MainThread]: [33mExited because of keyboard interrupt[0m
+[0m07:31:38.848661 [info ] [MainThread]: 
+[0m07:31:38.848915 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m07:31:38.849167 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:31:38.849338 [debug] [MainThread]: Connection 'create_energy_data_main' was properly closed.
+[0m07:31:38.849485 [debug] [MainThread]: Connection 'list_energy_data_main' was properly closed.
+[0m07:31:38.849674 [debug] [MainThread]: Connection 'seed.energy_transform.price' was properly closed.
+[0m07:31:38.849872 [info ] [MainThread]: 
+[0m07:31:38.850112 [info ] [MainThread]: Finished running 5 seeds in 0 hours 0 minutes and 29.81 seconds (29.81s).
+[0m07:31:38.850420 [error] [MainThread]: Encountered an error:
+
+[0m07:31:38.884483 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\cli\requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\cli\requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\cli\requires.py", line 391, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\cli\requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\cli\requires.py", line 408, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\cli\main.py", line 727, in seed
+    results = task.run()
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\task\runnable.py", line 626, in run
+    result = self.execute_with_hooks(selected_uids)
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\task\runnable.py", line 563, in execute_with_hooks
+    res = self.execute_nodes()
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\task\runnable.py", line 443, in execute_nodes
+    self.run_queue(pool)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\task\runnable.py", line 343, in run_queue
+    self.job_queue.join()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\graph\queue.py", line 220, in join
+    self.inner.join()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\harry\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 105, in join
+    self.all_tasks_done.wait()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\harry\AppData\Local\Programs\Python\Python313\Lib\threading.py", line 359, in wait
+    waiter.acquire()
+    ~~~~~~~~~~~~~~^^
+KeyboardInterrupt
+
+[0m07:31:38.885277 [debug] [MainThread]: Command `dbt seed` failed at 07:31:38.885182 after 31.11 seconds
+[0m07:31:38.885531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7FBC0DEB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7FB542F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7C1A5FB30>]}
+[0m07:31:38.885763 [debug] [MainThread]: Flushing usage events
+[0m07:31:39.498211 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:32:02.797158 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F671C41FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F66FA2C050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F672917110>]}
+
+
+============================== 07:32:02.800228 | 391d70fa-164f-4a09-b429-7fa360abd546 ==============================
+[0m07:32:02.800228 [info ] [MainThread]: Running with dbt=1.11.8
+[0m07:32:02.800639 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\harry\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt seed', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\harry\\Documents\\Projects\\2026\\EnergyPricing\\energy_transform\\logs'}
+[0m07:32:02.953507 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '391d70fa-164f-4a09-b429-7fa360abd546', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F672355220>]}
+[0m07:32:02.998048 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '391d70fa-164f-4a09-b429-7fa360abd546', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F673FEFDF0>]}
+[0m07:32:02.999882 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m07:32:03.130680 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m07:32:03.194131 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m07:32:03.194572 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '391d70fa-164f-4a09-b429-7fa360abd546', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F67410D250>]}
+[0m07:32:03.828558 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'energy_prices' in the 'models' section of file 'seeds\seeds.yml'
+[0m07:32:03.887340 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_first_dbt_model' in the 'models' section of file 'models\schema.yml'
+[0m07:32:03.888259 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_second_dbt_model' in the 'models' section of file 'models\schema.yml'
+[0m07:32:03.892865 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.energy_transform.unique_energy_prices_id.842fa84ab0' (seeds\seeds.yml) depends on a node named 'energy_prices' in package '' which was not found
+[0m07:32:03.893185 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.energy_transform.not_null_energy_prices_id.1b3b7f5712' (seeds\seeds.yml) depends on a node named 'energy_prices' in package '' which was not found
+[0m07:32:03.893690 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.energy_transform.unique_my_first_dbt_model_id.16e066b321' (models\schema.yml) depends on a node named 'my_first_dbt_model' in package '' which was not found
+[0m07:32:03.893990 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.energy_transform.not_null_my_first_dbt_model_id.5fb22c2710' (models\schema.yml) depends on a node named 'my_first_dbt_model' in package '' which was not found
+[0m07:32:03.894280 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.energy_transform.unique_my_second_dbt_model_id.57a0f8c493' (models\schema.yml) depends on a node named 'my_second_dbt_model' in package '' which was not found
+[0m07:32:03.894549 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.energy_transform.not_null_my_second_dbt_model_id.151b76d778' (models\schema.yml) depends on a node named 'my_second_dbt_model' in package '' which was not found
+[0m07:32:03.943949 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.energy_transform
+[0m07:32:03.947059 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '391d70fa-164f-4a09-b429-7fa360abd546', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6745B3200>]}
+[0m07:32:03.989823 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\target\manifest.json
+[0m07:32:03.991588 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\target\semantic_manifest.json
+[0m07:32:03.999626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '391d70fa-164f-4a09-b429-7fa360abd546', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F674A00D70>]}
+[0m07:32:03.999934 [info ] [MainThread]: Found 5 seeds, 475 macros
+[0m07:32:04.000203 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '391d70fa-164f-4a09-b429-7fa360abd546', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6745F3790>]}
+[0m07:32:04.001650 [info ] [MainThread]: 
+[0m07:32:04.002041 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m07:32:04.002384 [info ] [MainThread]: 
+[0m07:32:04.002763 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m07:32:04.006008 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_energy_data'
+[0m07:32:04.047348 [debug] [ThreadPool]: Using duckdb connection "list_energy_data"
+[0m07:32:04.047627 [debug] [ThreadPool]: On list_energy_data: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "connection_name": "list_energy_data"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"energy_data"'
+    
+  
+  
+[0m07:32:04.047833 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:32:04.059055 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m07:32:04.060054 [debug] [ThreadPool]: On list_energy_data: Close
+[0m07:32:04.060590 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_energy_data, now create_energy_data_main)
+[0m07:32:04.060912 [debug] [ThreadPool]: Creating schema "database: "energy_data"
+schema: "main"
+"
+[0m07:32:04.064918 [debug] [ThreadPool]: Using duckdb connection "create_energy_data_main"
+[0m07:32:04.065163 [debug] [ThreadPool]: On create_energy_data_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "connection_name": "create_energy_data_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='energy_data'
+        and type='sqlite'
+    
+  
+[0m07:32:04.065372 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m07:32:04.066101 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m07:32:04.067026 [debug] [ThreadPool]: Using duckdb connection "create_energy_data_main"
+[0m07:32:04.067260 [debug] [ThreadPool]: On create_energy_data_main: BEGIN
+[0m07:32:04.067596 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:32:04.067817 [debug] [ThreadPool]: Using duckdb connection "create_energy_data_main"
+[0m07:32:04.068004 [debug] [ThreadPool]: On create_energy_data_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "connection_name": "create_energy_data_main"} */
+
+    
+    
+        create schema if not exists "energy_data"."main"
+    
+[0m07:32:04.068367 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:32:04.068864 [debug] [ThreadPool]: On create_energy_data_main: COMMIT
+[0m07:32:04.069055 [debug] [ThreadPool]: Using duckdb connection "create_energy_data_main"
+[0m07:32:04.069226 [debug] [ThreadPool]: On create_energy_data_main: COMMIT
+[0m07:32:04.069503 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:32:04.069681 [debug] [ThreadPool]: On create_energy_data_main: Close
+[0m07:32:04.070608 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_energy_data_main'
+[0m07:32:04.073898 [debug] [ThreadPool]: Using duckdb connection "list_energy_data_main"
+[0m07:32:04.074419 [debug] [ThreadPool]: On list_energy_data_main: BEGIN
+[0m07:32:04.074593 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:32:04.074922 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:32:04.075275 [debug] [ThreadPool]: Using duckdb connection "list_energy_data_main"
+[0m07:32:04.075463 [debug] [ThreadPool]: On list_energy_data_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "connection_name": "list_energy_data_main"} */
+select
+      'energy_data' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'energy_data'
+  
+[0m07:32:04.077794 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m07:32:04.078499 [debug] [ThreadPool]: On list_energy_data_main: ROLLBACK
+[0m07:32:04.079250 [debug] [ThreadPool]: Failed to rollback 'list_energy_data_main'
+[0m07:32:04.079453 [debug] [ThreadPool]: On list_energy_data_main: Close
+[0m07:32:04.079854 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '391d70fa-164f-4a09-b429-7fa360abd546', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6748EB4D0>]}
+[0m07:32:04.080156 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:32:04.080339 [debug] [MainThread]: On master: BEGIN
+[0m07:32:04.080501 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m07:32:04.080800 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m07:32:04.080984 [debug] [MainThread]: On master: COMMIT
+[0m07:32:04.081149 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:32:04.081303 [debug] [MainThread]: On master: COMMIT
+[0m07:32:04.081555 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m07:32:04.081728 [debug] [MainThread]: On master: Close
+[0m07:32:04.083632 [debug] [Thread-1 (]: Began running node seed.energy_transform.demand
+[0m07:32:04.083959 [info ] [Thread-1 (]: 1 of 5 START seed file main.demand ............................................. [RUN]
+[0m07:32:04.084349 [debug] [Thread-1 (]: Acquiring new duckdb connection 'seed.energy_transform.demand'
+[0m07:32:04.084580 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.demand
+[0m07:32:04.084789 [debug] [Thread-1 (]: Began executing node seed.energy_transform.demand
+[0m07:32:19.448203 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand"
+[0m07:32:19.448574 [debug] [Thread-1 (]: On seed.energy_transform.demand: BEGIN
+[0m07:32:19.448840 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m07:32:19.449457 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:32:19.449684 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand"
+[0m07:32:19.449888 [debug] [Thread-1 (]: On seed.energy_transform.demand: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.demand"} */
+
+    create table "energy_data"."main"."demand" ("_id" integer,"SETTLEMENT_DATE" text,"SETTLEMENT_PERIOD" integer,"ND" integer,"TSD" integer,"ENGLAND_WALES_DEMAND" integer,"EMBEDDED_WIND_GENERATION" integer,"EMBEDDED_WIND_CAPACITY" integer,"EMBEDDED_SOLAR_GENERATION" integer,"EMBEDDED_SOLAR_CAPACITY" integer,"NON_BM_STOR" integer,"PUMP_STORAGE_PUMPING" integer,"IFA_FLOW" integer,"IFA2_FLOW" integer,"BRITNED_FLOW" integer,"MOYLE_FLOW" integer,"EAST_WEST_FLOW" integer,"NEMO_FLOW" integer,"NSL_FLOW" integer,"ELECLINK_FLOW" integer,"VIKING_FLOW" integer,"GREENLINK_FLOW" integer,"SCOTTISH_TRANSFER" integer)
+  
+[0m07:32:19.456809 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m07:32:19.463643 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand"
+[0m07:32:19.463934 [debug] [Thread-1 (]: On seed.energy_transform.demand: 
+          COPY "energy_data"."main"."demand" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\demand.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:32:19.630233 [debug] [Thread-1 (]: SQL status: OK in 0.166 seconds
+[0m07:32:19.633777 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.demand"
+[0m07:32:19.643292 [debug] [Thread-1 (]: On seed.energy_transform.demand: COMMIT
+[0m07:32:19.643592 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand"
+[0m07:32:19.643831 [debug] [Thread-1 (]: On seed.energy_transform.demand: COMMIT
+[0m07:32:19.647240 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m07:32:19.648407 [debug] [Thread-1 (]: On seed.energy_transform.demand: Close
+[0m07:32:19.649658 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '391d70fa-164f-4a09-b429-7fa360abd546', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6747FB330>]}
+[0m07:32:19.650003 [info ] [Thread-1 (]: 1 of 5 OK loaded seed file main.demand ......................................... [[32mINSERT 180766[0m in 15.56s]
+[0m07:32:19.650506 [debug] [Thread-1 (]: Finished running node seed.energy_transform.demand
+[0m07:32:19.650755 [debug] [Thread-1 (]: Began running node seed.energy_transform.demand_update
+[0m07:32:19.651154 [info ] [Thread-1 (]: 2 of 5 START seed file main.demand_update ...................................... [RUN]
+[0m07:32:19.651555 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.energy_transform.demand, now seed.energy_transform.demand_update)
+[0m07:32:19.651805 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.demand_update
+[0m07:32:19.652075 [debug] [Thread-1 (]: Began executing node seed.energy_transform.demand_update
+[0m07:32:19.864708 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand_update"
+[0m07:32:19.865019 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: BEGIN
+[0m07:32:19.865240 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:32:19.865686 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:32:19.865924 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand_update"
+[0m07:32:19.866131 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.demand_update"} */
+
+    create table "energy_data"."main"."demand_update" ("SETTLEMENT_DATE" date,"SETTLEMENT_PERIOD" integer,"ND" integer,"FORECAST_ACTUAL_INDICATOR" text,"TSD" integer,"ENGLAND_WALES_DEMAND" integer,"EMBEDDED_WIND_GENERATION" integer,"EMBEDDED_WIND_CAPACITY" integer,"EMBEDDED_SOLAR_GENERATION" integer,"EMBEDDED_SOLAR_CAPACITY" integer,"NON_BM_STOR" integer,"PUMP_STORAGE_PUMPING" integer,"SCOTTISH_TRANSFER" integer,"IFA_FLOW" integer,"IFA2_FLOW" integer,"BRITNED_FLOW" integer,"MOYLE_FLOW" integer,"EAST_WEST_FLOW" integer,"NEMO_FLOW" integer,"NSL_FLOW" integer,"ELECLINK_FLOW" integer,"VIKING_FLOW" integer,"GREENLINK_FLOW" integer)
+  
+[0m07:32:19.866713 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:32:19.867499 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand_update"
+[0m07:32:19.867761 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: 
+          COPY "energy_data"."main"."demand_update" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\demand_update.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:32:19.887140 [debug] [Thread-1 (]: SQL status: OK in 0.019 seconds
+[0m07:32:19.887629 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.demand_update"
+[0m07:32:19.889036 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: COMMIT
+[0m07:32:19.889283 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand_update"
+[0m07:32:19.889486 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: COMMIT
+[0m07:32:19.896162 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m07:32:19.896668 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: Close
+[0m07:32:19.897009 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '391d70fa-164f-4a09-b429-7fa360abd546', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6747D4550>]}
+[0m07:32:19.897326 [info ] [Thread-1 (]: 2 of 5 OK loaded seed file main.demand_update .................................. [[32mINSERT 2448[0m in 0.25s]
+[0m07:32:19.897761 [debug] [Thread-1 (]: Finished running node seed.energy_transform.demand_update
+[0m07:32:19.898002 [debug] [Thread-1 (]: Began running node seed.energy_transform.emissions
+[0m07:32:19.898327 [info ] [Thread-1 (]: 3 of 5 START seed file main.emissions .......................................... [RUN]
+[0m07:32:19.898649 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.energy_transform.demand_update, now seed.energy_transform.emissions)
+[0m07:32:19.898876 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.emissions
+[0m07:32:19.899148 [debug] [Thread-1 (]: Began executing node seed.energy_transform.emissions
+[0m07:32:24.304583 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.emissions"
+[0m07:32:24.304963 [debug] [Thread-1 (]: On seed.energy_transform.emissions: BEGIN
+[0m07:32:24.305217 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:32:24.305676 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:32:24.305896 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.emissions"
+[0m07:32:24.306096 [debug] [Thread-1 (]: On seed.energy_transform.emissions: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.emissions"} */
+
+    create table "energy_data"."main"."emissions" ("from" timestamp without time zone,"to" timestamp without time zone,"intensity.forecast" integer,"intensity.actual" integer,"intensity.index" text)
+  
+[0m07:32:24.306579 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:32:24.307436 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.emissions"
+[0m07:32:24.307722 [debug] [Thread-1 (]: On seed.energy_transform.emissions: 
+          COPY "energy_data"."main"."emissions" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\emissions.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:32:24.398661 [debug] [Thread-1 (]: SQL status: OK in 0.091 seconds
+[0m07:32:24.399278 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.emissions"
+[0m07:32:24.400859 [debug] [Thread-1 (]: On seed.energy_transform.emissions: COMMIT
+[0m07:32:24.401120 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.emissions"
+[0m07:32:24.401518 [debug] [Thread-1 (]: On seed.energy_transform.emissions: COMMIT
+[0m07:32:24.403587 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m07:32:24.404087 [debug] [Thread-1 (]: On seed.energy_transform.emissions: Close
+[0m07:32:24.404438 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '391d70fa-164f-4a09-b429-7fa360abd546', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6770BD450>]}
+[0m07:32:24.404769 [info ] [Thread-1 (]: 3 of 5 OK loaded seed file main.emissions ...................................... [[32mINSERT 151258[0m in 4.51s]
+[0m07:32:24.405201 [debug] [Thread-1 (]: Finished running node seed.energy_transform.emissions
+[0m07:32:24.405448 [debug] [Thread-1 (]: Began running node seed.energy_transform.generation
+[0m07:32:24.405781 [info ] [Thread-1 (]: 4 of 5 START seed file main.generation ......................................... [RUN]
+[0m07:32:24.406092 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.energy_transform.emissions, now seed.energy_transform.generation)
+[0m07:32:24.406289 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.generation
+[0m07:32:24.406479 [debug] [Thread-1 (]: Began executing node seed.energy_transform.generation
+[0m07:32:33.834831 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.generation"
+[0m07:32:33.835286 [debug] [Thread-1 (]: On seed.energy_transform.generation: BEGIN
+[0m07:32:33.835515 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:32:33.835955 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:32:33.836162 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.generation"
+[0m07:32:33.836347 [debug] [Thread-1 (]: On seed.energy_transform.generation: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.generation"} */
+
+    create table "energy_data"."main"."generation" ("startTime" timestamp without time zone,"settlementPeriod" integer,"fuelType" text,"generation" integer)
+  
+[0m07:32:33.836811 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:32:33.837596 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.generation"
+[0m07:32:33.837813 [debug] [Thread-1 (]: On seed.energy_transform.generation: 
+          COPY "energy_data"."main"."generation" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\generation.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:32:33.936234 [debug] [Thread-1 (]: SQL status: OK in 0.098 seconds
+[0m07:32:33.936965 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.generation"
+[0m07:32:33.938450 [debug] [Thread-1 (]: On seed.energy_transform.generation: COMMIT
+[0m07:32:33.938705 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.generation"
+[0m07:32:33.938918 [debug] [Thread-1 (]: On seed.energy_transform.generation: COMMIT
+[0m07:32:33.947227 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m07:32:33.947702 [debug] [Thread-1 (]: On seed.energy_transform.generation: Close
+[0m07:32:33.948050 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '391d70fa-164f-4a09-b429-7fa360abd546', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6748F6BA0>]}
+[0m07:32:33.948376 [info ] [Thread-1 (]: 4 of 5 OK loaded seed file main.generation ..................................... [[32mINSERT 495460[0m in 9.54s]
+[0m07:32:33.948806 [debug] [Thread-1 (]: Finished running node seed.energy_transform.generation
+[0m07:32:33.949043 [debug] [Thread-1 (]: Began running node seed.energy_transform.price
+[0m07:32:33.949372 [info ] [Thread-1 (]: 5 of 5 START seed file main.price .............................................. [RUN]
+[0m07:32:33.949679 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.energy_transform.generation, now seed.energy_transform.price)
+[0m07:32:33.949872 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.price
+[0m07:32:33.950057 [debug] [Thread-1 (]: Began executing node seed.energy_transform.price
+[0m07:32:38.060001 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.price"
+[0m07:32:38.060342 [debug] [Thread-1 (]: On seed.energy_transform.price: BEGIN
+[0m07:32:38.060649 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:32:38.061120 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:32:38.061341 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.price"
+[0m07:32:38.061542 [debug] [Thread-1 (]: On seed.energy_transform.price: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.price"} */
+
+    create table "energy_data"."main"."price" ("startTime" timestamp without time zone,"settlementPeriod" integer,"dataProvider" text,"price" float8,"volume" float8)
+  
+[0m07:32:38.062031 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:32:38.062799 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.price"
+[0m07:32:38.063084 [debug] [Thread-1 (]: On seed.energy_transform.price: 
+          COPY "energy_data"."main"."price" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\price.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:32:38.149348 [debug] [Thread-1 (]: SQL status: OK in 0.086 seconds
+[0m07:32:38.149895 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.price"
+[0m07:32:38.151881 [debug] [Thread-1 (]: On seed.energy_transform.price: COMMIT
+[0m07:32:38.152186 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.price"
+[0m07:32:38.152701 [debug] [Thread-1 (]: On seed.energy_transform.price: COMMIT
+[0m07:32:38.157285 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m07:32:38.157788 [debug] [Thread-1 (]: On seed.energy_transform.price: Close
+[0m07:32:38.158119 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '391d70fa-164f-4a09-b429-7fa360abd546', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F67419DC10>]}
+[0m07:32:38.158442 [info ] [Thread-1 (]: 5 of 5 OK loaded seed file main.price .......................................... [[32mINSERT 167220[0m in 4.21s]
+[0m07:32:38.158886 [debug] [Thread-1 (]: Finished running node seed.energy_transform.price
+[0m07:32:38.162973 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\target\run_results.json
+[0m07:32:38.163630 [error] [MainThread]: CANCEL query create_energy_data_main ........................................... [[31mCANCEL[0m]
+[0m07:32:38.163930 [error] [MainThread]: CANCEL query list_energy_data_main ............................................. [[31mCANCEL[0m]
+[0m07:32:38.164228 [error] [MainThread]: CANCEL query seed.energy_transform.price ....................................... [[31mCANCEL[0m]
+[0m07:32:38.164631 [info ] [MainThread]: 
+[0m07:32:38.164933 [info ] [MainThread]: [33mExited because of keyboard interrupt[0m
+[0m07:32:38.165202 [info ] [MainThread]: 
+[0m07:32:38.165452 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m07:32:38.165664 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:32:38.165821 [debug] [MainThread]: Connection 'create_energy_data_main' was properly closed.
+[0m07:32:38.165968 [debug] [MainThread]: Connection 'list_energy_data_main' was properly closed.
+[0m07:32:38.166114 [debug] [MainThread]: Connection 'seed.energy_transform.price' was properly closed.
+[0m07:32:38.166287 [info ] [MainThread]: 
+[0m07:32:38.166527 [info ] [MainThread]: Finished running 5 seeds in 0 hours 0 minutes and 34.16 seconds (34.16s).
+[0m07:32:38.166904 [error] [MainThread]: Encountered an error:
+
+[0m07:32:38.168970 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\cli\requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\cli\requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\cli\requires.py", line 391, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\cli\requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\cli\requires.py", line 408, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\cli\main.py", line 727, in seed
+    results = task.run()
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\task\runnable.py", line 626, in run
+    result = self.execute_with_hooks(selected_uids)
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\task\runnable.py", line 563, in execute_with_hooks
+    res = self.execute_nodes()
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\task\runnable.py", line 443, in execute_nodes
+    self.run_queue(pool)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\task\runnable.py", line 343, in run_queue
+    self.job_queue.join()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\harry\Documents\Projects\2026\EnergyPricing\venv\Lib\site-packages\dbt\graph\queue.py", line 220, in join
+    self.inner.join()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\harry\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 105, in join
+    self.all_tasks_done.wait()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\harry\AppData\Local\Programs\Python\Python313\Lib\threading.py", line 359, in wait
+    waiter.acquire()
+    ~~~~~~~~~~~~~~^^
+KeyboardInterrupt
+
+[0m07:32:38.169839 [debug] [MainThread]: Command `dbt seed` failed at 07:32:38.169716 after 35.46 seconds
+[0m07:32:38.170160 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F67493B770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6749B7B30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F63EDA3770>]}
+[0m07:32:38.170417 [debug] [MainThread]: Flushing usage events
+[0m07:32:38.812903 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:37:35.390959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023559451FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002355723C050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002355A127110>]}
+
+
+============================== 07:37:35.394027 | 8f92e804-8df2-4b41-b85e-c9cfa4d068fe ==============================
+[0m07:37:35.394027 [info ] [MainThread]: Running with dbt=1.11.8
+[0m07:37:35.394484 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\harry\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt seed', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\harry\\Documents\\Projects\\2026\\EnergyPricing\\energy_transform\\logs'}
+[0m07:37:35.545133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8f92e804-8df2-4b41-b85e-c9cfa4d068fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023559B61220>]}
+[0m07:37:35.588322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8f92e804-8df2-4b41-b85e-c9cfa4d068fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002355B7FFDF0>]}
+[0m07:37:35.590085 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m07:37:35.720999 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m07:37:35.799015 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m07:37:35.799303 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m07:37:35.799482 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m07:37:35.803361 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.energy_transform
+[0m07:37:35.820237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8f92e804-8df2-4b41-b85e-c9cfa4d068fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002355B91CA50>]}
+[0m07:37:35.864322 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\target\manifest.json
+[0m07:37:35.866207 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\target\semantic_manifest.json
+[0m07:37:35.875701 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8f92e804-8df2-4b41-b85e-c9cfa4d068fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002355BDF1D60>]}
+[0m07:37:35.876032 [info ] [MainThread]: Found 5 seeds, 475 macros
+[0m07:37:35.876371 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8f92e804-8df2-4b41-b85e-c9cfa4d068fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002355BF95010>]}
+[0m07:37:35.877601 [info ] [MainThread]: 
+[0m07:37:35.877898 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m07:37:35.878157 [info ] [MainThread]: 
+[0m07:37:35.878519 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m07:37:35.881835 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_energy_data'
+[0m07:37:35.958826 [debug] [ThreadPool]: Using duckdb connection "list_energy_data"
+[0m07:37:35.959157 [debug] [ThreadPool]: On list_energy_data: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "connection_name": "list_energy_data"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"energy_data"'
+    
+  
+  
+[0m07:37:35.959356 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:37:35.970634 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m07:37:35.971510 [debug] [ThreadPool]: On list_energy_data: Close
+[0m07:37:35.971973 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_energy_data, now create_energy_data_main)
+[0m07:37:35.972263 [debug] [ThreadPool]: Creating schema "database: "energy_data"
+schema: "main"
+"
+[0m07:37:35.976154 [debug] [ThreadPool]: Using duckdb connection "create_energy_data_main"
+[0m07:37:35.976377 [debug] [ThreadPool]: On create_energy_data_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "connection_name": "create_energy_data_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='energy_data'
+        and type='sqlite'
+    
+  
+[0m07:37:35.976559 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m07:37:35.977167 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m07:37:35.977902 [debug] [ThreadPool]: Using duckdb connection "create_energy_data_main"
+[0m07:37:35.978092 [debug] [ThreadPool]: On create_energy_data_main: BEGIN
+[0m07:37:35.978367 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:37:35.978537 [debug] [ThreadPool]: Using duckdb connection "create_energy_data_main"
+[0m07:37:35.978688 [debug] [ThreadPool]: On create_energy_data_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "connection_name": "create_energy_data_main"} */
+
+    
+    
+        create schema if not exists "energy_data"."main"
+    
+[0m07:37:35.979025 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:37:35.979519 [debug] [ThreadPool]: On create_energy_data_main: COMMIT
+[0m07:37:35.979716 [debug] [ThreadPool]: Using duckdb connection "create_energy_data_main"
+[0m07:37:35.979892 [debug] [ThreadPool]: On create_energy_data_main: COMMIT
+[0m07:37:35.980189 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:37:35.980369 [debug] [ThreadPool]: On create_energy_data_main: Close
+[0m07:37:35.981211 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_energy_data_main'
+[0m07:37:35.984511 [debug] [ThreadPool]: Using duckdb connection "list_energy_data_main"
+[0m07:37:35.984716 [debug] [ThreadPool]: On list_energy_data_main: BEGIN
+[0m07:37:35.984882 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:37:35.985190 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:37:35.985378 [debug] [ThreadPool]: Using duckdb connection "list_energy_data_main"
+[0m07:37:35.985542 [debug] [ThreadPool]: On list_energy_data_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "connection_name": "list_energy_data_main"} */
+select
+      'energy_data' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'energy_data'
+  
+[0m07:37:35.987688 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m07:37:35.988333 [debug] [ThreadPool]: On list_energy_data_main: ROLLBACK
+[0m07:37:35.989056 [debug] [ThreadPool]: Failed to rollback 'list_energy_data_main'
+[0m07:37:35.989260 [debug] [ThreadPool]: On list_energy_data_main: Close
+[0m07:37:35.989633 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8f92e804-8df2-4b41-b85e-c9cfa4d068fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002355C281160>]}
+[0m07:37:35.990092 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:37:35.990290 [debug] [MainThread]: On master: BEGIN
+[0m07:37:35.990468 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m07:37:35.990799 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m07:37:35.991006 [debug] [MainThread]: On master: COMMIT
+[0m07:37:35.991169 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:37:35.991325 [debug] [MainThread]: On master: COMMIT
+[0m07:37:35.991645 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m07:37:35.991866 [debug] [MainThread]: On master: Close
+[0m07:37:35.994106 [debug] [Thread-1 (]: Began running node seed.energy_transform.demand
+[0m07:37:35.994476 [info ] [Thread-1 (]: 1 of 5 START seed file main.demand ............................................. [RUN]
+[0m07:37:35.994913 [debug] [Thread-1 (]: Acquiring new duckdb connection 'seed.energy_transform.demand'
+[0m07:37:35.995160 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.demand
+[0m07:37:35.995379 [debug] [Thread-1 (]: Began executing node seed.energy_transform.demand
+[0m07:37:51.268806 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand"
+[0m07:37:51.269145 [debug] [Thread-1 (]: On seed.energy_transform.demand: BEGIN
+[0m07:37:51.269356 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m07:37:51.269925 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:51.270145 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand"
+[0m07:37:51.270335 [debug] [Thread-1 (]: On seed.energy_transform.demand: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.demand"} */
+
+    create table "energy_data"."main"."demand" ("_id" integer,"SETTLEMENT_DATE" text,"SETTLEMENT_PERIOD" integer,"ND" integer,"TSD" integer,"ENGLAND_WALES_DEMAND" integer,"EMBEDDED_WIND_GENERATION" integer,"EMBEDDED_WIND_CAPACITY" integer,"EMBEDDED_SOLAR_GENERATION" integer,"EMBEDDED_SOLAR_CAPACITY" integer,"NON_BM_STOR" integer,"PUMP_STORAGE_PUMPING" integer,"IFA_FLOW" integer,"IFA2_FLOW" integer,"BRITNED_FLOW" integer,"MOYLE_FLOW" integer,"EAST_WEST_FLOW" integer,"NEMO_FLOW" integer,"NSL_FLOW" integer,"ELECLINK_FLOW" integer,"VIKING_FLOW" integer,"GREENLINK_FLOW" integer,"SCOTTISH_TRANSFER" integer)
+  
+[0m07:37:51.271005 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:51.277407 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand"
+[0m07:37:51.277640 [debug] [Thread-1 (]: On seed.energy_transform.demand: 
+          COPY "energy_data"."main"."demand" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\demand.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:37:51.458345 [debug] [Thread-1 (]: SQL status: OK in 0.180 seconds
+[0m07:37:51.461957 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.demand"
+[0m07:37:51.471741 [debug] [Thread-1 (]: On seed.energy_transform.demand: COMMIT
+[0m07:37:51.472023 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand"
+[0m07:37:51.472222 [debug] [Thread-1 (]: On seed.energy_transform.demand: COMMIT
+[0m07:37:51.479538 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m07:37:51.480686 [debug] [Thread-1 (]: On seed.energy_transform.demand: Close
+[0m07:37:51.481984 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8f92e804-8df2-4b41-b85e-c9cfa4d068fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002355BDEFA10>]}
+[0m07:37:51.482325 [info ] [Thread-1 (]: 1 of 5 OK loaded seed file main.demand ......................................... [[32mINSERT 180766[0m in 15.49s]
+[0m07:37:51.482810 [debug] [Thread-1 (]: Finished running node seed.energy_transform.demand
+[0m07:37:51.483119 [debug] [Thread-1 (]: Began running node seed.energy_transform.demand_update
+[0m07:37:51.483443 [info ] [Thread-1 (]: 2 of 5 START seed file main.demand_update ...................................... [RUN]
+[0m07:37:51.483796 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.energy_transform.demand, now seed.energy_transform.demand_update)
+[0m07:37:51.484047 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.demand_update
+[0m07:37:51.484239 [debug] [Thread-1 (]: Began executing node seed.energy_transform.demand_update
+[0m07:37:51.693222 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand_update"
+[0m07:37:51.693543 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: BEGIN
+[0m07:37:51.693760 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:51.694202 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:51.694421 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand_update"
+[0m07:37:51.694619 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.demand_update"} */
+
+    create table "energy_data"."main"."demand_update" ("SETTLEMENT_DATE" date,"SETTLEMENT_PERIOD" integer,"ND" integer,"FORECAST_ACTUAL_INDICATOR" text,"TSD" integer,"ENGLAND_WALES_DEMAND" integer,"EMBEDDED_WIND_GENERATION" integer,"EMBEDDED_WIND_CAPACITY" integer,"EMBEDDED_SOLAR_GENERATION" integer,"EMBEDDED_SOLAR_CAPACITY" integer,"NON_BM_STOR" integer,"PUMP_STORAGE_PUMPING" integer,"SCOTTISH_TRANSFER" integer,"IFA_FLOW" integer,"IFA2_FLOW" integer,"BRITNED_FLOW" integer,"MOYLE_FLOW" integer,"EAST_WEST_FLOW" integer,"NEMO_FLOW" integer,"NSL_FLOW" integer,"ELECLINK_FLOW" integer,"VIKING_FLOW" integer,"GREENLINK_FLOW" integer)
+  
+[0m07:37:51.695230 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:51.695983 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand_update"
+[0m07:37:51.696205 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: 
+          COPY "energy_data"."main"."demand_update" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\demand_update.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:37:51.715579 [debug] [Thread-1 (]: SQL status: OK in 0.019 seconds
+[0m07:37:51.716033 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.demand_update"
+[0m07:37:51.717406 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: COMMIT
+[0m07:37:51.717651 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.demand_update"
+[0m07:37:51.717855 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: COMMIT
+[0m07:37:51.724635 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m07:37:51.725112 [debug] [Thread-1 (]: On seed.energy_transform.demand_update: Close
+[0m07:37:51.725436 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8f92e804-8df2-4b41-b85e-c9cfa4d068fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002355BDD6A40>]}
+[0m07:37:51.725744 [info ] [Thread-1 (]: 2 of 5 OK loaded seed file main.demand_update .................................. [[32mINSERT 2448[0m in 0.24s]
+[0m07:37:51.726177 [debug] [Thread-1 (]: Finished running node seed.energy_transform.demand_update
+[0m07:37:51.726418 [debug] [Thread-1 (]: Began running node seed.energy_transform.emissions
+[0m07:37:51.726739 [info ] [Thread-1 (]: 3 of 5 START seed file main.emissions .......................................... [RUN]
+[0m07:37:51.727060 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.energy_transform.demand_update, now seed.energy_transform.emissions)
+[0m07:37:51.727260 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.emissions
+[0m07:37:51.727440 [debug] [Thread-1 (]: Began executing node seed.energy_transform.emissions
+[0m07:37:56.146774 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.emissions"
+[0m07:37:56.147160 [debug] [Thread-1 (]: On seed.energy_transform.emissions: BEGIN
+[0m07:37:56.147373 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:56.148017 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:56.148250 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.emissions"
+[0m07:37:56.148443 [debug] [Thread-1 (]: On seed.energy_transform.emissions: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.emissions"} */
+
+    create table "energy_data"."main"."emissions" ("from" timestamp without time zone,"to" timestamp without time zone,"intensity.forecast" integer,"intensity.actual" integer,"intensity.index" text)
+  
+[0m07:37:56.148926 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:56.149666 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.emissions"
+[0m07:37:56.149882 [debug] [Thread-1 (]: On seed.energy_transform.emissions: 
+          COPY "energy_data"."main"."emissions" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\emissions.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:37:56.245077 [debug] [Thread-1 (]: SQL status: OK in 0.095 seconds
+[0m07:37:56.245686 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.emissions"
+[0m07:37:56.247406 [debug] [Thread-1 (]: On seed.energy_transform.emissions: COMMIT
+[0m07:37:56.247742 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.emissions"
+[0m07:37:56.247979 [debug] [Thread-1 (]: On seed.energy_transform.emissions: COMMIT
+[0m07:37:56.257484 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m07:37:56.258082 [debug] [Thread-1 (]: On seed.energy_transform.emissions: Close
+[0m07:37:56.258446 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8f92e804-8df2-4b41-b85e-c9cfa4d068fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002355BA78230>]}
+[0m07:37:56.258769 [info ] [Thread-1 (]: 3 of 5 OK loaded seed file main.emissions ...................................... [[32mINSERT 151258[0m in 4.53s]
+[0m07:37:56.259378 [debug] [Thread-1 (]: Finished running node seed.energy_transform.emissions
+[0m07:37:56.259625 [debug] [Thread-1 (]: Began running node seed.energy_transform.generation
+[0m07:37:56.259970 [info ] [Thread-1 (]: 4 of 5 START seed file main.generation ......................................... [RUN]
+[0m07:37:56.260325 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.energy_transform.emissions, now seed.energy_transform.generation)
+[0m07:37:56.260559 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.generation
+[0m07:37:56.260766 [debug] [Thread-1 (]: Began executing node seed.energy_transform.generation
+[0m07:38:05.781158 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.generation"
+[0m07:38:05.781495 [debug] [Thread-1 (]: On seed.energy_transform.generation: BEGIN
+[0m07:38:05.781707 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:38:05.782152 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:38:05.782378 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.generation"
+[0m07:38:05.782565 [debug] [Thread-1 (]: On seed.energy_transform.generation: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.generation"} */
+
+    create table "energy_data"."main"."generation" ("startTime" timestamp without time zone,"settlementPeriod" integer,"fuelType" text,"generation" integer)
+  
+[0m07:38:05.783089 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:38:05.784310 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.generation"
+[0m07:38:05.784537 [debug] [Thread-1 (]: On seed.energy_transform.generation: 
+          COPY "energy_data"."main"."generation" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\generation.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:38:05.886959 [debug] [Thread-1 (]: SQL status: OK in 0.102 seconds
+[0m07:38:05.887485 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.generation"
+[0m07:38:05.888928 [debug] [Thread-1 (]: On seed.energy_transform.generation: COMMIT
+[0m07:38:05.889183 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.generation"
+[0m07:38:05.889386 [debug] [Thread-1 (]: On seed.energy_transform.generation: COMMIT
+[0m07:38:05.891367 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m07:38:05.891853 [debug] [Thread-1 (]: On seed.energy_transform.generation: Close
+[0m07:38:05.892191 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8f92e804-8df2-4b41-b85e-c9cfa4d068fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023525D52CD0>]}
+[0m07:38:05.892511 [info ] [Thread-1 (]: 4 of 5 OK loaded seed file main.generation ..................................... [[32mINSERT 495460[0m in 9.63s]
+[0m07:38:05.892976 [debug] [Thread-1 (]: Finished running node seed.energy_transform.generation
+[0m07:38:05.893215 [debug] [Thread-1 (]: Began running node seed.energy_transform.price
+[0m07:38:05.893529 [info ] [Thread-1 (]: 5 of 5 START seed file main.price .............................................. [RUN]
+[0m07:38:05.893854 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.energy_transform.generation, now seed.energy_transform.price)
+[0m07:38:05.894082 [debug] [Thread-1 (]: Began compiling node seed.energy_transform.price
+[0m07:38:05.894281 [debug] [Thread-1 (]: Began executing node seed.energy_transform.price
+[0m07:38:09.395127 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.price"
+[0m07:38:09.395453 [debug] [Thread-1 (]: On seed.energy_transform.price: BEGIN
+[0m07:38:09.395657 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:38:09.396125 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:38:09.396360 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.price"
+[0m07:38:09.396548 [debug] [Thread-1 (]: On seed.energy_transform.price: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "energy_transform", "target_name": "dev", "node_id": "seed.energy_transform.price"} */
+
+    create table "energy_data"."main"."price" ("startTime" timestamp without time zone,"settlementPeriod" integer,"dataProvider" text,"price" float8,"volume" float8)
+  
+[0m07:38:09.397077 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:38:09.397840 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.price"
+[0m07:38:09.398071 [debug] [Thread-1 (]: On seed.energy_transform.price: 
+          COPY "energy_data"."main"."price" FROM 'C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\seeds\price.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:38:09.483408 [debug] [Thread-1 (]: SQL status: OK in 0.085 seconds
+[0m07:38:09.483945 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.energy_transform.price"
+[0m07:38:09.485354 [debug] [Thread-1 (]: On seed.energy_transform.price: COMMIT
+[0m07:38:09.485620 [debug] [Thread-1 (]: Using duckdb connection "seed.energy_transform.price"
+[0m07:38:09.485824 [debug] [Thread-1 (]: On seed.energy_transform.price: COMMIT
+[0m07:38:09.492778 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m07:38:09.493324 [debug] [Thread-1 (]: On seed.energy_transform.price: Close
+[0m07:38:09.493674 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8f92e804-8df2-4b41-b85e-c9cfa4d068fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002355BE13AF0>]}
+[0m07:38:09.493975 [info ] [Thread-1 (]: 5 of 5 OK loaded seed file main.price .......................................... [[32mINSERT 167220[0m in 3.60s]
+[0m07:38:09.494399 [debug] [Thread-1 (]: Finished running node seed.energy_transform.price
+[0m07:38:09.495252 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:38:09.495496 [debug] [MainThread]: On master: BEGIN
+[0m07:38:09.495682 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m07:38:09.496031 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m07:38:09.496209 [debug] [MainThread]: On master: COMMIT
+[0m07:38:09.496368 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:38:09.496516 [debug] [MainThread]: On master: COMMIT
+[0m07:38:09.496775 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m07:38:09.496961 [debug] [MainThread]: On master: Close
+[0m07:38:09.497188 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:38:09.497344 [debug] [MainThread]: Connection 'create_energy_data_main' was properly closed.
+[0m07:38:09.497481 [debug] [MainThread]: Connection 'list_energy_data_main' was properly closed.
+[0m07:38:09.497611 [debug] [MainThread]: Connection 'seed.energy_transform.price' was properly closed.
+[0m07:38:09.497779 [info ] [MainThread]: 
+[0m07:38:09.498027 [info ] [MainThread]: Finished running 5 seeds in 0 hours 0 minutes and 33.62 seconds (33.62s).
+[0m07:38:09.498781 [debug] [MainThread]: Command end result
+[0m07:38:09.520056 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\target\manifest.json
+[0m07:38:09.521715 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\target\semantic_manifest.json
+[0m07:38:09.525612 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\harry\Documents\Projects\2026\EnergyPricing\energy_transform\target\run_results.json
+[0m07:38:09.525828 [info ] [MainThread]: 
+[0m07:38:09.526149 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m07:38:09.526418 [info ] [MainThread]: 
+[0m07:38:09.526695 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m07:38:09.527292 [debug] [MainThread]: Command `dbt seed` succeeded at 07:38:09.527221 after 34.22 seconds
+[0m07:38:09.527520 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235592E3170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002355C2557F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002355C2569F0>]}
+[0m07:38:09.527748 [debug] [MainThread]: Flushing usage events
+[0m07:38:10.139452 [debug] [MainThread]: An error was encountered while trying to flush usage events
