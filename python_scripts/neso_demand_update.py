@@ -4,6 +4,7 @@
 import pandas as pd
 from datetime import datetime as dt
 from pathlib import Path
+import json
 
 # ===============================
 # system paths
@@ -18,6 +19,7 @@ csv_dir.mkdir(parents=True, exist_ok=True)
 script_dir = Path(__file__).resolve().parents[1]
 output_dir = script_dir / "data"
 
+json_dir = output_dir / "json"
 csv_dir = output_dir / "csv"
 seeds_dir = script_dir / "energy_transform/seeds"
 
@@ -33,5 +35,9 @@ data = pd.read_csv('https://api.neso.energy/dataset/7a12172a-939c-404c-b581-a612
 
 data.to_csv(csv_dir / 'demand_update.csv', index=False)
 data.to_csv(seeds_dir / 'demand_update.csv', index=False)
+
+output_file = json_dir / 'demand_update.json'
+
+data_json = data.to_json(output_file, orient='records', indent=4)
 
 print(f'Success! Saved {len(data)} rows.')
