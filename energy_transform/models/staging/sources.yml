@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: local_raw
+    meta: 
+      external_location: "../data/json/{name}.json"
+      
+    tables:
+      - name: demand_update
+      - name: demand
+      - name: emissions
+      - name: generation
+      - name: price
